@@ -409,6 +409,7 @@ header .side-nav .social-link {
 }
 
 @-moz-keyframes scroll-down {
+/*
     0% {
         opacity: 0.4;
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
@@ -452,9 +453,11 @@ header .side-nav .social-link {
         filter: alpha(opacity=40);
         top: 0;
     }
+*/
 }
 
 @-o-keyframes scroll-down {
+/*
     0% {
         opacity: 0.4;
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
@@ -475,6 +478,7 @@ header .side-nav .social-link {
         filter: alpha(opacity=40);
         top: 0;
     }
+*/
 }
 
 @keyframes scroll-down {
@@ -593,7 +597,7 @@ header .go-back i {
     font-weight: 400;
 }
 
-@-webkit-keyframes rainbow {
+#@-webkit-keyframes rainbow {
 
     0%,
     100% {
@@ -639,7 +643,7 @@ header .go-back i {
     }
 }
 
-@keyframes rainbow {
+#@keyframes rainbow {
 
     0%,
     100% {
