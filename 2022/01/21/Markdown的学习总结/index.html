@@ -7,10 +7,15 @@
     <meta name="keywords" content="Markdown的学习总结, Wgm&#39;s Blog">
     <meta name="description" content="Markdown学习总结1.标题语法
 用#表示，注意#和标题之间要有一个空格，几个#表示几级标题。
-用&amp;#x3D;和-分别表示一级和二级标题。
+用=和-分别表示一级和二级标题。
 注意在写源码时标题要用空行包围
 
-展示123456# 一级标题## 二级标题一级标题======">
+展示# 一级标题
+## 二级标题
+一级标题
+=======
+二级标题
+-">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -271,21 +276,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-01-22
+                    2022-12-08
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    493
+                    940
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -302,11 +307,16 @@
             <div id="articleContent">
                 <h1 id="Markdown学习总结"><a href="#Markdown学习总结" class="headerlink" title="Markdown学习总结"></a>Markdown学习总结</h1><h2 id="1-标题"><a href="#1-标题" class="headerlink" title="1.标题"></a>1.标题</h2><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><ul>
 <li>用#表示，注意#和标题之间要有一个空格，几个#表示几级标题。</li>
-<li>用&#x3D;和-分别表示一级和二级标题。</li>
+<li>用=和-分别表示一级和二级标题。</li>
 <li>注意在写源码时标题要用空行包围</li>
 </ul>
-<h3 id="展示"><a href="#展示" class="headerlink" title="展示"></a>展示</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># 一级标题</span></span><br><span class="line"><span class="section">## 二级标题</span></span><br><span class="line"><span class="section">一级标题</span></span><br><span class="line"><span class="section">=======</span></span><br><span class="line"><span class="section">二级标题</span></span><br><span class="line"><span class="section">--------</span></span><br></pre></td></tr></table></figure>
-
+<h3 id="展示"><a href="#展示" class="headerlink" title="展示"></a>展示</h3><pre class=" language-markdown"><code class="language-markdown"><span class="token title important"><span class="token punctuation">#</span> 一级标题</span>
+<span class="token title important"><span class="token punctuation">##</span> 二级标题</span>
+一级标题
+=======
+二级标题
+<span class="token hr punctuation">--------</span>
+</code></pre>
 <h2 id="2-段落格式"><a href="#2-段落格式" class="headerlink" title="2.段落格式"></a>2.段落格式</h2><ul>
 <li>直接编写文字</li>
 <li>换行：使用两个以上的空格加上回车</li>
@@ -315,23 +325,27 @@
 <h2 id="3-列表"><a href="#3-列表" class="headerlink" title="3.列表"></a>3.列表</h2><ul>
 <li><strong>有序</strong>：数字加’.’这个符号表示</li>
 <li><strong>无序</strong>：星号(*)、加号(+)或是减号(-)作为列表标记，这些标记后面要添加一个空格，然后再填写内容</li>
-<li><strong>嵌套</strong>：需在子列表中的选项前面添加四&#x2F;三个空格</li>
+<li><strong>嵌套</strong>：需在子列表中的选项前面添加四/三个空格</li>
 </ul>
 <h2 id="4-链接"><a href="#4-链接" class="headerlink" title="4.链接"></a>4.链接</h2><ul>
 <li>直接引用</li>
 </ul>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">链接名称</span>](<span class="link">链接地址</span>)    注意此种展示只显示链接名</span><br><span class="line"></span><br><span class="line">&lt;链接地址&gt;</span><br></pre></td></tr></table></figure>
+<pre class=" language-markdown"><code class="language-markdown"><span class="token url">[链接名称](链接地址)</span>    注意此种展示只显示链接名
 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>链接地址</span><span class="token punctuation">></span></span>
+</code></pre>
 <ul>
 <li>通过变量来设置一个链接，变量赋值在文档末尾进行</li>
 </ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">这个链接用 1 作为网址变量 [Google][1]</span><br><span class="line"></span><br><span class="line"> [1]: http://www.google.com/</span><br></pre></td></tr></table></figure>
+<pre><code>这个链接用 1 作为网址变量 [Google][1]
 
+ [1]: http://www.google.com/
+</code></pre>
 <h2 id="5-代码"><a href="#5-代码" class="headerlink" title="5.代码"></a>5.代码</h2><ul>
-<li><p><strong>单行代码</strong>：段落上的一个函数或片段的代码可以用反引号把它包起来（&#96;）</p>
+<li><p><strong>单行代码</strong>：段落上的一个函数或片段的代码可以用反引号把它包起来（`）</p>
 </li>
 <li><p><strong>代码区块</strong>：</p>
-<p>1.（可以语法亮亮）用 &#96;&#96;&#96; 包裹一段代码，并指定一种语言（也可以不指定）</p>
+<p>1.（可以语法亮亮）用 ``` 包裹一段代码，并指定一种语言（也可以不指定）</p>
 <p>2.使用 4 个空格或者一个制表符（Tab 键）</p>
 </li>
 </ul>
@@ -350,6 +364,53 @@
 <li><p>常用表达式、数学公式、函数公式、集合系列符号、箭头系列符号<br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/dotnetcrazy/p/9293102.html#_map10">https://www.cnblogs.com/dotnetcrazy/p/9293102.html#_map10</a></p>
 </li>
 </ul>
+<pre class=" language-matlab"><code class="language-matlab"><span class="token comment" spellcheck="true">%%</span>
+<span class="token comment" spellcheck="true">% 参数名称	参数值</span>
+<span class="token comment" spellcheck="true">% 带宽（B）	20MHz</span>
+<span class="token comment" spellcheck="true">% 脉冲宽度（tao）	10e-6s</span>
+<span class="token comment" spellcheck="true">% 脉冲重复间隔 （T）	1e-4s</span>
+<span class="token comment" spellcheck="true">% 采样频率（fs）	80MHz</span>
+<span class="token comment" spellcheck="true">% 目标1距离（R1）	7000m</span>
+<span class="token comment" spellcheck="true">% 目标2距离（R2）	15000m</span>
+<span class="token comment" spellcheck="true">% 目标3距离（R3）	15300m</span>
+<span class="token comment" spellcheck="true">% 目标4距离（R4）	15500m</span>
+clear
+T<span class="token operator">=</span><span class="token number">1e-4</span><span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">%脉冲重复周期</span>
+tao<span class="token operator">=</span><span class="token number">10e-6</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">%脉冲宽度（时宽）</span>
+B<span class="token operator">=</span><span class="token number">20e6</span><span class="token punctuation">;</span>     <span class="token comment" spellcheck="true">%带宽</span>
+fs<span class="token operator">=</span><span class="token number">4</span><span class="token operator">*</span>B <span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">%采样频率</span>
+r<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">7000</span><span class="token punctuation">,</span><span class="token number">15000</span><span class="token punctuation">,</span><span class="token number">15300</span><span class="token punctuation">,</span><span class="token number">15500</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">%目标的距离</span>
+c<span class="token operator">=</span><span class="token number">3e8</span><span class="token punctuation">;</span>      <span class="token comment" spellcheck="true">%光速</span>
+rcs<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">0.2</span><span class="token punctuation">,</span><span class="token number">0.5</span><span class="token punctuation">,</span><span class="token number">0.3</span><span class="token punctuation">,</span><span class="token number">0.35</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">%目标的RCS（雷达散射截面积）</span>
+delay<span class="token operator">=</span><span class="token number">2</span><span class="token operator">.*</span>r<span class="token operator">/</span>c<span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">%回波到达的时间</span>
+K<span class="token operator">=</span>B<span class="token operator">/</span>tao<span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">%调频斜率</span>
+tr<span class="token operator">=</span><span class="token operator">-</span>tao<span class="token operator">/</span><span class="token number">2</span><span class="token operator">:</span><span class="token number">1</span><span class="token operator">/</span>fs<span class="token operator">:</span>tao<span class="token operator">/</span><span class="token number">2</span><span class="token operator">-</span><span class="token number">1</span><span class="token operator">/</span>fs<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">%发射信号的时间采样点</span>
+x_linear<span class="token operator">=</span><span class="token number">5</span><span class="token operator">*</span><span class="token function">exp</span><span class="token punctuation">(</span><span class="token number">j</span><span class="token operator">*</span><span class="token keyword">pi</span><span class="token operator">*</span>K<span class="token operator">.*</span>tr<span class="token operator">.*</span>tr<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">%发射信号</span>
+t<span class="token operator">=</span><span class="token function">ceil</span><span class="token punctuation">(</span><span class="token function">delay</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">.*</span>fs<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token operator">:</span><span class="token number">1</span><span class="token operator">:</span><span class="token function">ceil</span><span class="token punctuation">(</span><span class="token function">delay</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">.*</span>fs<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token function">length</span><span class="token punctuation">(</span>tr<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">%回波所占的采样点</span>
+<span class="token keyword">for</span> <span class="token number">i</span><span class="token operator">=</span><span class="token number">1</span><span class="token operator">:</span><span class="token function">length</span><span class="token punctuation">(</span>r<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span>
+    m<span class="token operator">=</span><span class="token function">ceil</span><span class="token punctuation">(</span><span class="token function">delay</span><span class="token punctuation">(</span><span class="token number">i</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">.*</span>fs<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token operator">:</span><span class="token number">1</span><span class="token operator">:</span><span class="token function">ceil</span><span class="token punctuation">(</span><span class="token function">delay</span><span class="token punctuation">(</span><span class="token number">i</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">.*</span>fs<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token function">length</span><span class="token punctuation">(</span>tr<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span> 
+    t<span class="token operator">=</span><span class="token punctuation">[</span>t<span class="token punctuation">;</span>m<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span>
+<span class="token comment" spellcheck="true">%ceil函数：朝正无穷大方向取整。用法说明：w=ceil(z)函数将输入z中的元素取整，</span>
+<span class="token comment" spellcheck="true">%值w为不小于本身的最小整数。对于复数B，分别对实部和虚部取整。</span>
+echo1<span class="token operator">=</span><span class="token function">rand</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span>T<span class="token operator">*</span>fs<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">%噪声</span>
+echo2<span class="token operator">=</span><span class="token function">rand</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span>T<span class="token operator">*</span>fs<span class="token punctuation">)</span><span class="token punctuation">;</span>
+echo3<span class="token operator">=</span><span class="token function">rand</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span>T<span class="token operator">*</span>fs<span class="token punctuation">)</span><span class="token punctuation">;</span>
+echo4<span class="token operator">=</span><span class="token function">rand</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span>T<span class="token operator">*</span>fs<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">echo1</span><span class="token punctuation">(</span><span class="token function">t</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token operator">:</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">=</span>x_linear<span class="token operator">.*</span><span class="token function">rcs</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token function">echo1</span><span class="token punctuation">(</span><span class="token function">t</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token operator">:</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">%不同目标的回波信号</span>
+<span class="token function">echo2</span><span class="token punctuation">(</span><span class="token function">t</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token operator">:</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">=</span>x_linear<span class="token operator">.*</span><span class="token function">rcs</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token function">echo1</span><span class="token punctuation">(</span><span class="token function">t</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token operator">:</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">echo3</span><span class="token punctuation">(</span><span class="token function">t</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token operator">:</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">=</span>x_linear<span class="token operator">.*</span><span class="token function">rcs</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token function">echo1</span><span class="token punctuation">(</span><span class="token function">t</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token operator">:</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">echo4</span><span class="token punctuation">(</span><span class="token function">t</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token operator">:</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">=</span>x_linear<span class="token operator">.*</span><span class="token function">rcs</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token function">echo1</span><span class="token punctuation">(</span><span class="token function">t</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token operator">:</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+echo<span class="token operator">=</span>echo1<span class="token operator">+</span>echo2<span class="token operator">+</span>echo3<span class="token operator">+</span>echo4<span class="token punctuation">;</span>
+<span class="token function">figure</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token function">plot</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token operator">:</span><span class="token number">1</span><span class="token operator">/</span>fs<span class="token operator">:</span>T<span class="token number">-1</span><span class="token operator">/</span>fs<span class="token punctuation">,</span><span class="token function">real</span><span class="token punctuation">(</span>echo<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">xlabel</span><span class="token punctuation">(</span><span class="token string">'time'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">title</span><span class="token punctuation">(</span><span class="token string">'回波'</span><span class="token punctuation">)</span>
+h<span class="token operator">=</span><span class="token function">exp</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1i</span><span class="token operator">*</span><span class="token keyword">pi</span><span class="token operator">*</span>K<span class="token operator">.*</span><span class="token punctuation">(</span>tr<span class="token operator">.^</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">%匹配滤波器的冲激响应</span>
+output<span class="token operator">=</span><span class="token function">ifft</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token function">fft</span><span class="token punctuation">(</span>h<span class="token punctuation">,</span><span class="token function">length</span><span class="token punctuation">(</span>echo<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">.*</span><span class="token function">fft</span><span class="token punctuation">(</span>echo<span class="token punctuation">,</span><span class="token function">length</span><span class="token punctuation">(</span>echo<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">%h和echo做fft的长度要一样</span>
+<span class="token function">figure</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+<span class="token function">subplot</span><span class="token punctuation">(</span><span class="token number">211</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">plot</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token operator">:</span><span class="token number">1</span><span class="token operator">/</span>fs<span class="token operator">:</span>T<span class="token number">-1</span><span class="token operator">/</span>fs<span class="token punctuation">,</span><span class="token function">abs</span><span class="token punctuation">(</span>output<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">title</span><span class="token punctuation">(</span><span class="token string">'脉冲压缩输出波形'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">xlabel</span><span class="token punctuation">(</span><span class="token string">'time'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">subplot</span><span class="token punctuation">(</span><span class="token number">212</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">plot</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token operator">:</span><span class="token number">1</span><span class="token operator">/</span>fs<span class="token operator">:</span>T<span class="token number">-1</span><span class="token operator">/</span>fs<span class="token punctuation">,</span><span class="token function">db</span><span class="token punctuation">(</span><span class="token function">abs</span><span class="token punctuation">(</span>output<span class="token punctuation">)</span><span class="token operator">/</span><span class="token function">max</span><span class="token punctuation">(</span><span class="token function">abs</span><span class="token punctuation">(</span>output<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token string">'r'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">title</span><span class="token punctuation">(</span><span class="token string">'脉压结果分贝图'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">ylabel</span><span class="token punctuation">(</span><span class="token string">'dB'</span><span class="token punctuation">)</span>
+</code></pre>
 
                 
             </div>
@@ -707,7 +768,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">676</span>
+                        class="white-color">1.1k</span>
             
             
             
