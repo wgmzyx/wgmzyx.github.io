@@ -342,7 +342,7 @@ Typora最详细的语法啦
 <p><a target="_blank" rel="noopener" href="http://npm.taobao.org/mirrors/git-for-windows">镜像下载</a></p>
 <h3 id="linux基本命令"><a href="#linux基本命令" class="headerlink" title="linux基本命令"></a>linux基本命令</h3><ul>
 <li><p><code>cd</code> ：改变目录</p>
-<pre class=" language-git"><code class="language-git">cd git
+<pre class=" language-bash"><code class="language-bash"><span class="token function">cd</span> <span class="token function">git</span>
 </code></pre>
 </li>
 <li><p><code>cd ..</code>:回退到上一个目录，注意中间有个空格</p>
@@ -459,23 +459,23 @@ Typora最详细的语法啦
 <h4 id="查看文件状态"><a href="#查看文件状态" class="headerlink" title="查看文件状态"></a>查看文件状态</h4><blockquote>
 <p>查看指定文件状态</p>
 </blockquote>
-<pre><code>git status [filename]
+<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> status <span class="token punctuation">[</span>filename<span class="token punctuation">]</span>
 </code></pre>
 <blockquote>
 <p>查看所有文件状态</p>
 </blockquote>
-<pre><code>git status
+<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> status
 </code></pre>
 <blockquote>
 <p>添加所有文件到暂存区</p>
 </blockquote>
-<pre><code>git add .
+<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> add <span class="token keyword">.</span>
 </code></pre>
 <blockquote>
 <p>提交暂存区中的内容到本地仓库 -m提交信息</p>
 </blockquote>
-<pre><code>git commit -m
-git commit -m "new file hello.txt"
+<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> commit -m
+<span class="token function">git</span> commit -m <span class="token string">"new file hello.txt"</span>
 </code></pre>
 <h4 id="忽略文件"><a href="#忽略文件" class="headerlink" title="忽略文件"></a>忽略文件</h4><p>有时候我们不想把某些文件纳入版本控制中，比如数据库文件、临时文件、设计文件等。</p>
 <blockquote>
@@ -488,11 +488,11 @@ git commit -m "new file hello.txt"
 <li>如果名称的最前面是一个 **/**，表示要忽略的文件在此目录下，而子目录中的文件不忽略。</li>
 <li>如果名称的最后面是一个 **/**，表示要忽略的是此目录下的所有文件。</li>
 </ul>
-<pre class=" language-git"><code class="language-git">*.txt        # 忽略所有 .txt 结尾的文件，这样的话上传就不会被选中。
-!lib.txt     # lib.txt 除外
-/temp        # 仅忽略项目根目录下的 temp 文件，不包括其它 temp 目录。
-build/       # 忽略 build/ 目录下的所有文件。
-doc/*.txt    # 忽略 doc/notes.txt 但不包括doc/server/arch.txt。
+<pre class=" language-bash"><code class="language-bash">*.txt        <span class="token comment" spellcheck="true"># 忽略所有 .txt 结尾的文件，这样的话上传就不会被选中。</span>
+<span class="token operator">!</span>lib.txt     <span class="token comment" spellcheck="true"># lib.txt 除外</span>
+/temp        <span class="token comment" spellcheck="true"># 仅忽略项目根目录下的 temp 文件，不包括其它 temp 目录。</span>
+build/       <span class="token comment" spellcheck="true"># 忽略 build/ 目录下的所有文件。</span>
+doc/*.txt    <span class="token comment" spellcheck="true"># 忽略 doc/notes.txt 但不包括doc/server/arch.txt。</span>
 </code></pre>
 <h2 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h2><h3 id="开发环境搭建"><a href="#开发环境搭建" class="headerlink" title="开发环境搭建"></a>开发环境搭建</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_56597639/article/details/121543691">jdk+IDEA</a></p>
 <p>目前本电脑只是搭建了IDEA</p>
@@ -646,8 +646,12 @@ doc/*.txt    # 忽略 doc/notes.txt 但不包括doc/server/arch.txt。
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/html-CSS/">
-                        <span class="chip bg-color">-html -CSS</span>
+                    <a href="/tags/html/">
+                        <span class="chip bg-color">html</span>
+                    </a>
+                    
+                    <a href="/tags/CSS/">
+                        <span class="chip bg-color">CSS</span>
                     </a>
                     
                 </div>
@@ -684,8 +688,8 @@ doc/*.txt    # 忽略 doc/notes.txt 但不包括doc/server/arch.txt。
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/git/" class="post-category">
-                                    git
+                            <a href="/categories/%E5%8D%9A%E5%AE%A2/" class="post-category">
+                                    博客
                                 </a>
                             
                             
@@ -701,10 +705,6 @@ doc/*.txt    # 忽略 doc/notes.txt 但不包括doc/server/arch.txt。
                     
                     <a href="/tags/Hexo/">
                         <span class="chip bg-color">Hexo</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%8D%9A%E5%AE%A2/">
-                        <span class="chip bg-color">博客</span>
                     </a>
                     
                 </div>
@@ -853,7 +853,7 @@ doc/*.txt    # 忽略 doc/notes.txt 但不包括doc/server/arch.txt。
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">4.9k</span>
+                        class="white-color">5.2k</span>
             
             
             
