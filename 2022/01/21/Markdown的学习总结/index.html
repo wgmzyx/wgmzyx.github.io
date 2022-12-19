@@ -276,21 +276,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-12-08
+                    2022-12-17
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    483
+                    698
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -306,8 +306,8 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="Markdown学习总结"><a href="#Markdown学习总结" class="headerlink" title="Markdown学习总结"></a>Markdown学习总结</h1><h2 id="1-标题"><a href="#1-标题" class="headerlink" title="1.标题"></a>1.标题</h2><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><ul>
-<li>用#表示，注意#和标题之间要有一个空格，几个#表示几级标题。</li>
-<li>用=和-分别表示一级和二级标题。</li>
+<li>用<code>#</code>表示，注意#和标题之间要有一个空格，几个#表示几级标题。</li>
+<li>用<code>=</code>和<code>-</code>分别表示一级和二级标题。</li>
 <li>注意在写源码时标题要用空行包围</li>
 </ul>
 <h3 id="展示"><a href="#展示" class="headerlink" title="展示"></a>展示</h3><pre class=" language-markdown"><code class="language-markdown"><span class="token title important"><span class="token punctuation">#</span> 一级标题</span>
@@ -323,9 +323,9 @@
 <li>新段落：段落后加一个空行</li>
 </ul>
 <h2 id="3-列表"><a href="#3-列表" class="headerlink" title="3.列表"></a>3.列表</h2><ul>
-<li><strong>有序</strong>：数字加’.’这个符号表示</li>
-<li><strong>无序</strong>：星号(*)、加号(+)或是减号(-)作为列表标记，这些标记后面要添加一个空格，然后再填写内容</li>
-<li><strong>嵌套</strong>：需在子列表中的选项前面添加四/三个空格</li>
+<li><strong>有序</strong>：数字加<code>.</code>这个符号表示</li>
+<li><strong>无序</strong>：星号<code>*</code>、加号<code>+</code>或是减号<code>-</code>作为列表标记，这些标记后面要添加一个空格，然后再填写内容</li>
+<li><strong>嵌套</strong>：需在子列表中的选项前面添加<strong>四/三个空格</strong></li>
 </ul>
 <h2 id="4-链接"><a href="#4-链接" class="headerlink" title="4.链接"></a>4.链接</h2><ul>
 <li>直接引用</li>
@@ -335,14 +335,14 @@
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>链接地址</span><span class="token punctuation">></span></span>
 </code></pre>
 <ul>
-<li>通过变量来设置一个链接，变量赋值在文档末尾进行</li>
+<li>通过<strong>变量</strong>来设置一个链接，变量赋值在文档末尾进行</li>
 </ul>
 <pre><code>这个链接用 1 作为网址变量 [Google][1]
 
  [1]: http://www.google.com/
 </code></pre>
 <h2 id="5-代码"><a href="#5-代码" class="headerlink" title="5.代码"></a>5.代码</h2><ul>
-<li><p><strong>单行代码</strong>：段落上的一个函数或片段的代码可以用反引号把它包起来（`）</p>
+<li><p><strong>单行代码</strong>：段落上的一个函数或片段的代码可以用反引号把它包起来`</p>
 </li>
 <li><p><strong>代码区块</strong>：</p>
 <p>1.（可以语法亮亮）用 ``` 包裹一段代码，并指定一种语言（也可以不指定）</p>
@@ -363,6 +363,42 @@
 </li>
 <li><p>常用表达式、数学公式、函数公式、集合系列符号、箭头系列符号<br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/dotnetcrazy/p/9293102.html#_map10">https://www.cnblogs.com/dotnetcrazy/p/9293102.html#_map10</a></p>
 </li>
+</ul>
+<h4 id="公式识别网站"><a href="#公式识别网站" class="headerlink" title="公式识别网站"></a>公式识别网站</h4><p><a target="_blank" rel="noopener" href="https://mathf.itewqq.cn/">https://mathf.itewqq.cn/</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.latexlive.com/">在线LaTeX公式编辑器-编辑器 (latexlive.com)</a></p>
+<h2 id="9-任务列表"><a href="#9-任务列表" class="headerlink" title="9.任务列表"></a>9.任务列表</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> Write the press release</li>
+<li><input disabled="" type="checkbox"> Update the website</li>
+<li><input disabled="" type="checkbox"> Contact the media</li>
+</ul>
+<pre class=" language-markdown"><code class="language-markdown"><span class="token list punctuation">-</span> [x] Write the press release
+<span class="token list punctuation">-</span> [ ] Update the website
+<span class="token list punctuation">-</span> [ ] Contact the media
+</code></pre>
+<h2 id="10-表格"><a href="#10-表格" class="headerlink" title="10.表格"></a>10.表格</h2><p><a target="_blank" rel="noopener" href="https://markdown.com.cn/extended-syntax/tables.html">Markdown 表格</a></p>
+<h2 id="11-Typora"><a href="#11-Typora" class="headerlink" title="11.Typora"></a>11.Typora</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/feizuiku0116/article/details/119898062">最详细的语法啦</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/293557841">基本语法以及快捷键，图床设置</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.typora.net/527.html">软件使用技巧</a></p>
+<h4 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h4><ul>
+<li>无序列表：<code>-</code> + 空格</li>
+<li>有序列表：<code>1.</code> + 空格</li>
+<li><strong>引用</strong>：<code>&gt;</code> + 空格</li>
+<li>标题：<code>ctrl</code> + 数字</li>
+<li>表格：<code>ctrl</code> + t</li>
+<li><strong>生成目录</strong>：<code>[TOC]</code> + 回车</li>
+<li>选中一整行：<code>ctrl</code> + l</li>
+<li>选中单词：<code>ctrl</code> + d</li>
+<li>选中相同格式的文字：<code>ctrl</code> + e</li>
+<li>跳转到文章开头：<code>ctrl</code> + <code>home</code></li>
+<li>跳转到文章结尾：<code>ctrl</code> + <code>end</code></li>
+<li>搜索：<code>ctrl</code> + f</li>
+<li>替换：<code>ctrl</code> + h</li>
+<li>加粗：<code>ctrl</code> + b</li>
+<li>倾斜：<code>ctrl</code> + i</li>
+<li>下划线：<code>ctrl</code> + u</li>
+<li>删除线：<code>alt</code> + <code>shift</code> + 5</li>
+<li>插入图片：直接拖动到指定位置即可或者<code>ctrl</code> + <code>shift</code> + i</li>
+<li><strong>插入链接</strong>：<code>ctrl</code> + k</li>
 </ul>
 
                 
@@ -717,7 +753,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">5.3k</span>
+                        class="white-color">9.3k</span>
             
             
             
