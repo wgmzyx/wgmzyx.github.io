@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="gitee/github+hexo搭建博客及使用, Wgm&#39;s Blog">
-    <meta name="description" content="搭建博客喽！">
+    <meta name="keywords" content="Matlab学习, Wgm&#39;s Blog">
+    <meta name="description" content="本文总结matlab的某些知识点！">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>gitee/github+hexo搭建博客及使用 | Wgm&#39;s Blog</title>
+    <title>Matlab学习 | Wgm&#39;s Blog</title>
     <link rel="icon" type="image/jpeg" href="/favicon1.jpg">
     
 
@@ -210,7 +210,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">gitee/github+hexo搭建博客及使用</h1>
+                    <h1 class="description center-align post-title">Matlab学习</h1>
                 </div>
             </div>
         </div>
@@ -234,12 +234,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Github/">
-                                <span class="chip bg-color">Github</span>
-                            </a>
-                        
-                            <a href="/tags/Hexo/">
-                                <span class="chip bg-color">Hexo</span>
+                            <a href="/tags/Matlab/">
+                                <span class="chip bg-color">Matlab</span>
                             </a>
                         
                     </div>
@@ -250,8 +246,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%8D%9A%E5%AE%A2/" class="post-category">
-                                博客
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
+                                学习笔记
                             </a>
                         
                     </div>
@@ -263,7 +259,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-01-21
+                    2023-01-09
                 </div>
                 
 
@@ -277,7 +273,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    627
+                    523
                 </div>
                 
 
@@ -299,59 +295,84 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>  之前大一搭建过一次博客，但是由于懒去从来没有用过，最近看见别人高逼格的网站，于是就想着将自己的学习以及生活记录下来，于是一场折腾由此开始~~</p>
-<h2 id="博客搭建过程"><a href="#博客搭建过程" class="headerlink" title="博客搭建过程"></a>博客搭建过程</h2><p><a target="_blank" rel="noopener" href="https://ranchongzhi.github.io/built-blog-1/">利用hexo+Gitee搭建个人网站</a></p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/gongch0604/article/details/100729421">hexo+github+hexo-theme-matery搭建个人免费博客</a></p>
-<h2 id="选择自己喜欢的主题及配置"><a href="#选择自己喜欢的主题及配置" class="headerlink" title="选择自己喜欢的主题及配置"></a>选择自己喜欢的主题及配置</h2><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/mfrank/p/12830097.html">Hexo 主题 Matery 配置</a></p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/victoryxa/article/details/105841309">Hexo+Github博客搭建之Matery主题个性化修改篇（一）</a></p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/victoryxa/article/details/105841440">Hexo+Github博客搭建之Matery主题个性化修改篇（二）</a></p>
-<p><a target="_blank" rel="noopener" href="https://blog.sky03.cn/posts/42790.html#toc-heading-1">Hexo进阶之各种优化</a></p>
-<h2 id="如何写博客"><a href="#如何写博客" class="headerlink" title="如何写博客"></a>如何写博客</h2><ul>
-<li>在本地的<code>sourse\_posts</code>中修改Markdown文件</li>
-<li>在博客跟目录右键单击选择<code>Git Bash Here</code>，执行以下三个命令</li>
-<li>三连：<code>hexo clean</code>, <code>hexo g</code>, <code>hexo d</code> 或者最后 <code>hexo s</code> 本地预览再推送</li>
+                <h1 id="知识点学习"><a href="#知识点学习" class="headerlink" title="知识点学习"></a>知识点学习</h1><h2 id="数组索引"><a href="#数组索引" class="headerlink" title="数组索引"></a>数组索引</h2><ul>
+<li>从<strong>1</strong>开始</li>
 </ul>
-<pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#清除缓存以及public文件夹，public文件夹里的东西就是真正被推送到仓库里的东西，每次修改配置文件后都要执行该命令</span>
-hexo c
-<span class="token comment" spellcheck="true">#生成静态页面文件，每次clean后也要重新生成</span>
-hexo g
-<span class="token comment" spellcheck="true">#向仓库推送文件</span>
-hexo d
-</code></pre>
-<h2 id="常见的hexo命令"><a href="#常见的hexo命令" class="headerlink" title="常见的hexo命令"></a>常见的hexo命令</h2><pre class=" language-bash"><code class="language-bash">hexo new <span class="token string">"postName"</span>      <span class="token comment" spellcheck="true"># 新建文章</span>
-hexo new page <span class="token string">"pageName"</span> <span class="token comment" spellcheck="true"># 新建页面</span>
-hexo generate            <span class="token comment" spellcheck="true"># 生成静态页面至public目录</span>
-hexo server              <span class="token comment" spellcheck="true"># 开启预览访问端口（默认端口4000，'ctrl + c'关闭server）</span>
-hexo deploy              <span class="token comment" spellcheck="true"># 部署到GitHub</span>
-hexo <span class="token function">help</span>                <span class="token comment" spellcheck="true"># 查看帮助</span>
-hexo version             <span class="token comment" spellcheck="true"># 查看Hexo的版本</span>
-缩写命令：
-hexo n <span class="token operator">==</span> hexo new
-hexo g <span class="token operator">==</span> hexo generate
-hexo s <span class="token operator">==</span> hexo server
-hexo d <span class="token operator">==</span> hexo deploy
-组合命令：
-hexo s -g   <span class="token comment" spellcheck="true"># 生成并本地预览</span>
-hexo d -g   <span class="token comment" spellcheck="true"># 生成并上传</span>
-</code></pre>
-<h2 id="问题及解决方案"><a href="#问题及解决方案" class="headerlink" title="问题及解决方案"></a>问题及解决方案</h2><h5 id="在GitHub上克隆资源时较慢"><a href="#在GitHub上克隆资源时较慢" class="headerlink" title="在GitHub上克隆资源时较慢"></a>在GitHub上克隆资源时较慢</h5><pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># socks5协议，1080端口修改成自己的本地代理端口</span>
-<span class="token function">git</span> config --global http.https://github.com.proxy socks5://127.0.0.1:10808
-<span class="token function">git</span> config --global https.https://github.com.proxy socks5://127.0.0.1:10808
+<h2 id="文件读取"><a href="#文件读取" class="headerlink" title="文件读取"></a>文件读取</h2><p><code>import_company_info_123.m</code></p>
+<pre class=" language-matlab"><code class="language-matlab"><span class="token comment" spellcheck="true">%% 设置导入选项并导入数据</span>
+opts <span class="token operator">=</span> <span class="token function">delimitedTextImportOptions</span><span class="token punctuation">(</span>"NumVariables"<span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> "Encoding"<span class="token punctuation">,</span> "UTF<span class="token number">-8</span>"<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="token comment" spellcheck="true"># http协议，1081端口修改成自己的本地代理端口</span>
-<span class="token function">git</span> config --global http.https://github.com.proxy https://127.0.0.1:10809
-<span class="token function">git</span> config --global https.https://github.com.proxy https://127.0.0.1:10809
-<span class="token comment" spellcheck="true">#此处只对github加速，对其他不加速，使用的代理为v2ray中的代理端口</span>
+<span class="token comment" spellcheck="true">% 指定范围和分隔符</span>
+opts<span class="token punctuation">.</span>DataLines <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> Inf<span class="token punctuation">]</span><span class="token punctuation">;</span>
+opts<span class="token punctuation">.</span>Delimiter <span class="token operator">=</span> "<span class="token punctuation">,</span>"<span class="token punctuation">;</span>
 
-<span class="token comment" spellcheck="true">#取消限定github的代理</span>
-<span class="token function">git</span> config --global --unset http.https://github.com.proxy
+<span class="token comment" spellcheck="true">% 指定列名称和类型</span>
+opts<span class="token punctuation">.</span>VariableNames <span class="token operator">=</span> <span class="token punctuation">[</span>"company_code"<span class="token punctuation">,</span> "company_name"<span class="token punctuation">,</span> "company_score"<span class="token punctuation">,</span> "company_is_fine"<span class="token punctuation">]</span><span class="token punctuation">;</span>
+opts<span class="token punctuation">.</span>VariableTypes <span class="token operator">=</span> <span class="token punctuation">[</span>"double"<span class="token punctuation">,</span> "string"<span class="token punctuation">,</span> "categorical"<span class="token punctuation">,</span> "categorical"<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">% 指定文件级属性</span>
+opts<span class="token punctuation">.</span>ExtraColumnsRule <span class="token operator">=</span> "ignore"<span class="token punctuation">;</span>
+opts<span class="token punctuation">.</span>EmptyLineRule <span class="token operator">=</span> "read"<span class="token punctuation">;</span>
+
+
+<span class="token comment" spellcheck="true">% 指定变量属性</span>
+opts <span class="token operator">=</span> <span class="token function">setvaropts</span><span class="token punctuation">(</span>opts<span class="token punctuation">,</span> "company_code"<span class="token punctuation">,</span> "TrimNonNumeric"<span class="token punctuation">,</span> true<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">%删除非数值字符</span>
+opts <span class="token operator">=</span> <span class="token function">setvaropts</span><span class="token punctuation">(</span>opts<span class="token punctuation">,</span> "company_code"<span class="token punctuation">,</span> "ThousandsSeparator"<span class="token punctuation">,</span> "<span class="token punctuation">,</span>"<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">%： 如果名称-值对组指定为 </span><span class="token string">'ThousandsSeparator'</span><span class="token punctuation">,</span><span class="token string">','</span>，则导入函数将文本 "<span class="token number">1</span><span class="token punctuation">,</span><span class="token number">234</span><span class="token punctuation">,</span><span class="token number">000</span>" 导入为 <span class="token number">1234000</span>。
+opts <span class="token operator">=</span> <span class="token function">setvaropts</span><span class="token punctuation">(</span>opts<span class="token punctuation">,</span> "company_score"<span class="token punctuation">,</span> "EmptyFieldRule"<span class="token punctuation">,</span> "auto"<span class="token punctuation">)</span><span class="token punctuation">;</span>
+opts <span class="token operator">=</span> <span class="token function">setvaropts</span><span class="token punctuation">(</span>opts<span class="token punctuation">,</span> "company_is_fine"<span class="token punctuation">,</span> "EmptyFieldRule"<span class="token punctuation">,</span> "auto"<span class="token punctuation">)</span><span class="token punctuation">;</span>
+opts <span class="token operator">=</span> <span class="token function">setvaropts</span><span class="token punctuation">(</span>opts<span class="token punctuation">,</span>  "company_name"<span class="token punctuation">,</span> "WhitespaceRule"<span class="token punctuation">,</span> "preserve"<span class="token punctuation">)</span><span class="token punctuation">;</span>
+opts <span class="token operator">=</span> <span class="token function">setvaropts</span><span class="token punctuation">(</span>opts<span class="token punctuation">,</span>  "company_name"<span class="token punctuation">,</span> "EmptyFieldRule"<span class="token punctuation">,</span> "auto"<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">% 导入数据</span>
+company_info_123 <span class="token operator">=</span> <span class="token function">readtable</span><span class="token punctuation">(</span>"附件<span class="token number">1</span>：<span class="token number">123</span>家有信贷记录企业的相关数据<span class="token punctuation">.</span>csv"<span class="token punctuation">,</span> opts<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+<span class="token comment" spellcheck="true">%% 清除临时变量</span>
+clear opts
 </code></pre>
-<h5 id="http-localhost-4000拒接链接"><a href="#http-localhost-4000拒接链接" class="headerlink" title="http://localhost:4000拒接链接"></a><a href="http://localhost:4000拒接链接">http://localhost:4000拒接链接</a></h5><p>原因：4000端口被占用，使用命令修改端口</p>
-<pre class=" language-bash"><code class="language-bash">hexo s -p 5000    
+<p><code>调用</code></p>
+<pre><code>%% 读取数据
+run("import_company_info_123.m");
 </code></pre>
-<h2 id="图床"><a href="#图床" class="headerlink" title="图床"></a>图床</h2><h5 id="方案一：使用免费的"><a href="#方案一：使用免费的" class="headerlink" title="方案一：使用免费的"></a>方案一：使用免费的</h5><p><a target="_blank" rel="noopener" href="https://smms.app/">SM.MS</a></p>
-<h5 id="方案二：gitee-picgo"><a href="#方案二：gitee-picgo" class="headerlink" title="方案二：gitee+picgo"></a>方案二：gitee+picgo</h5><p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1801576?from=article.detail.1789847">Gitee + Typora，搭建自己的免费图床！</a></p>
-<p>可能在未来某一天存在崩溃的风险~~</p>
+<p><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/matlab_prog/access-data-in-a-table.html?searchHighlight=table&amp;s_tid=srchtitle_table_4">访问表中的数据</a></p>
+<p><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/matlab_prog/calculations-on-tables.html?searchHighlight=table&amp;s_tid=srchtitle_table_7">对表执行计算</a></p>
+<pre class=" language-matlab"><code class="language-matlab"><span class="token comment" spellcheck="true">%% 计算特征矩阵</span>
+target <span class="token operator">=</span> <span class="token function">zeros</span><span class="token punctuation">(</span><span class="token number">123</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">% % import_invoice_123(import_invoice_123.is_valid=="作废发票",:)=[];</span>
+<span class="token comment" spellcheck="true">% % export_invoice_123(export_invoice_123.is_valid=="作废发票",:)=[];</span>
+import_money_all <span class="token operator">=</span> <span class="token function">sum</span><span class="token punctuation">(</span>import_invoice_123<span class="token punctuation">.</span>money<span class="token punctuation">)</span><span class="token punctuation">;</span>
+export_money_all <span class="token operator">=</span> <span class="token function">sum</span><span class="token punctuation">(</span>export_invoice_123<span class="token punctuation">.</span>money<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">for</span> code <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token function">findgroups</span><span class="token punctuation">(</span>company_info_123<span class="token punctuation">.</span>company_code<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">'</span>
+    <span class="token function">target</span><span class="token punctuation">(</span>code<span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">=</span> code<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">%公司代号</span>
+
+    export_sum <span class="token operator">=</span> <span class="token function">sum</span><span class="token punctuation">(</span>export_invoice_123<span class="token punctuation">.</span><span class="token function">sum</span><span class="token punctuation">(</span>export_invoice_123<span class="token punctuation">.</span>company_code<span class="token operator">==</span>code<span class="token operator">&amp;</span> export_invoice_123<span class="token punctuation">.</span>is_valid<span class="token operator">==</span>"有效发票"<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    import_sum <span class="token operator">=</span> <span class="token function">sum</span><span class="token punctuation">(</span>import_invoice_123<span class="token punctuation">.</span><span class="token function">sum</span><span class="token punctuation">(</span>import_invoice_123<span class="token punctuation">.</span>company_code<span class="token operator">==</span>code<span class="token operator">&amp;</span> import_invoice_123<span class="token punctuation">.</span>is_valid<span class="token operator">==</span>"有效发票"<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">target</span><span class="token punctuation">(</span>code<span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token punctuation">(</span>export_sum<span class="token operator">-</span>import_sum<span class="token punctuation">)</span><span class="token operator">/</span><span class="token punctuation">(</span>export_sum<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">%利润率 盈利率</span>
+
+    export_sum <span class="token operator">=</span> <span class="token function">sum</span><span class="token punctuation">(</span>export_invoice_123<span class="token punctuation">.</span><span class="token function">sum</span><span class="token punctuation">(</span>export_invoice_123<span class="token punctuation">.</span>company_code<span class="token operator">==</span>code<span class="token operator">&amp;</span> export_invoice_123<span class="token punctuation">.</span>is_valid<span class="token operator">==</span>"有效发票"<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    import_sum <span class="token operator">=</span> <span class="token function">sum</span><span class="token punctuation">(</span>import_invoice_123<span class="token punctuation">.</span><span class="token function">sum</span><span class="token punctuation">(</span>import_invoice_123<span class="token punctuation">.</span>company_code<span class="token operator">==</span>code<span class="token operator">&amp;</span> import_invoice_123<span class="token punctuation">.</span>is_valid<span class="token operator">==</span>"有效发票"<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">target</span><span class="token punctuation">(</span>code<span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token punctuation">(</span>export_sum<span class="token operator">-</span>import_sum<span class="token punctuation">)</span><span class="token operator">/</span><span class="token punctuation">(</span>import_sum<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">%偿债</span>
+
+
+    export_invoice <span class="token operator">=</span> export_invoice_123<span class="token punctuation">.</span><span class="token function">buyer_code</span><span class="token punctuation">(</span>export_invoice_123<span class="token punctuation">.</span>company_code<span class="token operator">==</span>code<span class="token operator">&amp;</span> export_invoice_123<span class="token punctuation">.</span>is_valid<span class="token operator">==</span>"有效发票"<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    import_invoice <span class="token operator">=</span> import_invoice_123<span class="token punctuation">.</span><span class="token function">seller_code</span><span class="token punctuation">(</span>import_invoice_123<span class="token punctuation">.</span>company_code<span class="token operator">==</span>code<span class="token operator">&amp;</span> import_invoice_123<span class="token punctuation">.</span>is_valid<span class="token operator">==</span>"有效发票"<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">target</span><span class="token punctuation">(</span>code<span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token function">length</span><span class="token punctuation">(</span>import_invoice<span class="token punctuation">)</span><span class="token operator">/</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token function">unique</span><span class="token punctuation">(</span>import_invoice<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">%stability 进项稳定性</span>
+    <span class="token function">target</span><span class="token punctuation">(</span>code<span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token function">length</span><span class="token punctuation">(</span>export_invoice<span class="token punctuation">)</span><span class="token operator">/</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token function">unique</span><span class="token punctuation">(</span>export_invoice<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">%stability 销项稳定性</span>
+
+    export_invalid_invoice <span class="token operator">=</span> export_invoice_123<span class="token punctuation">.</span><span class="token function">buyer_code</span><span class="token punctuation">(</span>export_invoice_123<span class="token punctuation">.</span>company_code<span class="token operator">==</span>code <span class="token operator">&amp;</span> export_invoice_123<span class="token punctuation">.</span>is_valid<span class="token operator">==</span>"作废发票"<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    import_invalid_invoice <span class="token operator">=</span> import_invoice_123<span class="token punctuation">.</span><span class="token function">seller_code</span><span class="token punctuation">(</span>import_invoice_123<span class="token punctuation">.</span>company_code<span class="token operator">==</span>code <span class="token operator">&amp;</span> import_invoice_123<span class="token punctuation">.</span>is_valid<span class="token operator">==</span>"作废发票"<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">target</span><span class="token punctuation">(</span>code<span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token function">length</span><span class="token punctuation">(</span>export_invalid_invoice<span class="token punctuation">)</span><span class="token operator">+</span><span class="token function">length</span><span class="token punctuation">(</span>import_invalid_invoice<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token punctuation">(</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">(</span>import_invoice<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">(</span>export_invoice<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">%stability 作废发票率</span>
+
+    export_invoice <span class="token operator">=</span> export_invoice_123<span class="token punctuation">.</span><span class="token function">money</span><span class="token punctuation">(</span>export_invoice_123<span class="token punctuation">.</span>company_code<span class="token operator">==</span>code<span class="token operator">&amp;</span> export_invoice_123<span class="token punctuation">.</span>is_valid<span class="token operator">==</span>"有效发票"<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    import_invoice <span class="token operator">=</span> import_invoice_123<span class="token punctuation">.</span><span class="token function">money</span><span class="token punctuation">(</span>import_invoice_123<span class="token punctuation">.</span>company_code<span class="token operator">==</span>code<span class="token operator">&amp;</span> import_invoice_123<span class="token punctuation">.</span>is_valid<span class="token operator">==</span>"有效发票"<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    export_nag_invoice <span class="token operator">=</span> export_invoice_123<span class="token punctuation">.</span><span class="token function">money</span><span class="token punctuation">(</span>export_invoice_123<span class="token punctuation">.</span>money <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token operator">&amp;</span> export_invoice_123<span class="token punctuation">.</span>is_valid<span class="token operator">==</span>"有效发票"<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    import_nag_invoice <span class="token operator">=</span> import_invoice_123<span class="token punctuation">.</span><span class="token function">money</span><span class="token punctuation">(</span>import_invoice_123<span class="token punctuation">.</span>money <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token operator">&amp;</span> import_invoice_123<span class="token punctuation">.</span>is_valid<span class="token operator">==</span>"有效发票"<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">target</span><span class="token punctuation">(</span>code<span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token operator">-</span><span class="token function">sum</span><span class="token punctuation">(</span>import_nag_invoice<span class="token punctuation">)</span><span class="token operator">/</span><span class="token function">sum</span><span class="token punctuation">(</span>import_invoice<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">%供货退货比例</span>
+    <span class="token function">target</span><span class="token punctuation">(</span>code<span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token operator">-</span><span class="token function">sum</span><span class="token punctuation">(</span>export_nag_invoice<span class="token punctuation">)</span><span class="token operator">/</span><span class="token function">sum</span><span class="token punctuation">(</span>export_invoice<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">%退货比例</span>
+    clear tmp export_sum import_sum export_money import_money export_invoice import_invoice export_invalid_invoice import_invalid_invoice
+    clear export_nag_invoice import_nag_invoice
+<span class="token keyword">end</span>
+</code></pre>
 
                 
             </div>
@@ -378,7 +399,7 @@ hexo d -g   <span class="token comment" spellcheck="true"># 生成并上传</spa
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2022/01/21/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%8F%8A%E4%BD%BF%E7%94%A8/">http://example.com/2022/01/21/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%8F%8A%E4%BD%BF%E7%94%A8/</a>
+                    <a href="http://example.com/2023/01/09/Matlab%E5%AD%A6%E4%B9%A0/">http://example.com/2023/01/09/Matlab%E5%AD%A6%E4%B9%A0/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -416,12 +437,8 @@ hexo d -g   <span class="token comment" spellcheck="true"># 生成并上传</spa
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Github/">
-                                    <span class="chip bg-color">Github</span>
-                                </a>
-                            
-                                <a href="/tags/Hexo/">
-                                    <span class="chip bg-color">Hexo</span>
+                                <a href="/tags/Matlab/">
+                                    <span class="chip bg-color">Matlab</span>
                                 </a>
                             
                         </div>
@@ -467,73 +484,29 @@ hexo d -g   <span class="token comment" spellcheck="true"># 生成并上传</spa
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/12/08/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/">
+                <a href="/2023/01/09/Matlab%E5%AD%A6%E4%B9%A0/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="工具使用">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="Matlab学习">
                         
-                        <span class="card-title">工具使用</span>
+                        <span class="card-title">Matlab学习</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            本文介绍常用资料。
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-12-08
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            Wgm
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/">
-                        <span class="chip bg-color">工具使用</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2022/01/21/Markdown%E7%9A%84%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="Markdown的学习总结">
-                        
-                        <span class="card-title">Markdown的学习总结</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            本文总结markdown学习中的部分语法！
+                            本文总结matlab的某些知识点！
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-21
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-01-09
                             </span>
                         <span class="publish-author">
                             
@@ -547,11 +520,61 @@ hexo d -g   <span class="token comment" spellcheck="true"># 生成并上传</spa
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Markdown/">
-                        <span class="chip bg-color">Markdown</span>
+                    <a href="/tags/Matlab/">
+                        <span class="chip bg-color">Matlab</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/12/28/%E7%A2%8E%E7%A2%8E%E5%BF%B5/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="碎碎念">
+                        
+                        <span class="card-title">碎碎念</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            这里有东西被加密了，需要输入密码查看哦。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-12-28
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%9D%82%E8%B0%88/" class="post-category">
+                                    杂谈
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%97%A5%E5%BF%97%E9%9A%8F%E7%AC%94/">
+                        <span class="chip bg-color">日志随笔</span>
                     </a>
                     
                 </div>
