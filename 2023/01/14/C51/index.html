@@ -273,21 +273,21 @@ CPU通过控制寄存器中的数值，在通过驱动器和IO端口相连从而
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-01-14
+                    2023-01-15
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    262
+                    946
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -305,15 +305,15 @@ CPU通过控制寄存器中的数值，在通过驱动器和IO端口相连从而
                 <h2 id="基本思想"><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h2><ul>
 <li><p>单片机最小应用系统：单片机、晶振、复位电路、电源</p>
 </li>
-<li><p>电源和Vcc引脚之间有滤波电容</p>
+<li><p>电源和Vcc引脚之间有<strong>滤波电容</strong></p>
 </li>
-<li><p>LED：正极引脚长，负极引脚短，正极电源和LED之间有限流电阻，防止LED灯烧坏</p>
+<li><p>LED：正极引脚长，负极引脚短，正极电源和LED之间有<strong>限流电阻</strong>，防止LED灯烧坏</p>
 </li>
 <li><p>CPU通过控制寄存器中的数值，在通过驱动器和IO端口相连从而控制外设，同时，也可以从IO端口获得外设的状态，送给寄存器</p>
 </li>
 <li><p>轻触按键：在原理图中，若其公共端接低电平，则按下后，端口获得的值为0，没有按下时端口处于高电平</p>
 </li>
-<li><p>按键在按下时不其作用，在松手的一瞬间才起作用，消抖</p>
+<li><p>按键在按下时不其作用，在松手的一瞬间才起作用，<strong>消抖</strong></p>
 </li>
 </ul>
 <pre class=" language-c"><code class="language-c"><span class="token keyword">while</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
@@ -331,6 +331,84 @@ CPU通过控制寄存器中的数值，在通过驱动器和IO端口相连从而
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
+<ul>
+<li><p>数码管 一个单独的，分为共阴极和共阳极，要使其正常工作，共阴极接0，共阳极接1</p>
+</li>
+<li><p>四位一体数码管静态显示：共阴极和共阳极作为位选，四个数码管公用一个段选</p>
+</li>
+<li><p>动态显示：高频率扫描</p>
+</li>
+<li><p>74LS138：38译码器，可以通过三个地址端控制八个数码管的位选</p>
+</li>
+<li><p>单片机的高电平驱动能力弱，低电平驱动能力强</p>
+</li>
+<li><p>在数码管的段选和输入间一般会有<strong>双向数据缓冲器</strong>，比如74HC245，其中DIR用于控制方向，既可以给数码管提供段选信号，又可以读取数码管的段选限号，可以用于提高数据的驱动能力</p>
+</li>
+<li><p>注意寄存器高低位的方向：最左边是高位，最右边是低位</p>
+</li>
+<li><p>动态显示数码管+模块化编程</p>
+<p>其它.c文件想使用其中的代码时，只需要#include “XXX.h”文件即可</p>
+<p><code>main.c</code></p>
+<pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;REGX52.H></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">"Delay.h"</span>	</span><span class="token comment" spellcheck="true">//包含Delay头文件</span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">"Nixie.h"</span>	</span><span class="token comment" spellcheck="true">//包含数码管头文件</span>
+
+<span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token function">Nixie</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment" spellcheck="true">//在数码管的第1位置显示1</span>
+        <span class="token function">Nixie</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment" spellcheck="true">//在数码管的第2位置显示2</span>
+        <span class="token function">Nixie</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment" spellcheck="true">//在数码管的第3位置显示3</span>
+        <span class="token function">Nixie</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment" spellcheck="true">//在数码管的第4位置显示4</span>
+        <span class="token function">Nixie</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment" spellcheck="true">//在数码管的第5位置显示5</span>
+        <span class="token function">Nixie</span><span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment" spellcheck="true">//在数码管的第6位置显示6</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>把各个模块的代码放在不同的.c文件里</p>
+<p><code>Nixie.c</code> </p>
+<pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;REGX52.H></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">"Delay.h"</span>	</span><span class="token comment" spellcheck="true">//包含Delay头文件</span>
+<span class="token comment" spellcheck="true">//数码管静态、动态显示，驱动方法：38译码器+双向数据缓冲器 数码管为共阴极</span>
+<span class="token comment" spellcheck="true">//该段扫描方法：单片机直接扫描 硬件设备简单，但会耗费大量的单片机CPU时间</span>
+<span class="token comment" spellcheck="true">//另一种扫描方法：专用驱动芯片：内部自带显存、扫描电路，单片机只需告诉它显示什么即可</span>
+
+<span class="token comment" spellcheck="true">//数码管段码表</span>
+<span class="token keyword">unsigned</span> <span class="token keyword">char</span> NixieTable<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token punctuation">{</span><span class="token number">0x3F</span><span class="token punctuation">,</span><span class="token number">0x06</span><span class="token punctuation">,</span><span class="token number">0x5B</span><span class="token punctuation">,</span><span class="token number">0x4F</span><span class="token punctuation">,</span><span class="token number">0x66</span><span class="token punctuation">,</span><span class="token number">0x6D</span><span class="token punctuation">,</span><span class="token number">0x7D</span><span class="token punctuation">,</span><span class="token number">0x07</span><span class="token punctuation">,</span><span class="token number">0x7F</span><span class="token punctuation">,</span><span class="token number">0x6F</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">//数码管显示子函数</span>
+<span class="token keyword">void</span> <span class="token function">Nixie</span><span class="token punctuation">(</span><span class="token keyword">unsigned</span> <span class="token keyword">char</span> Location<span class="token punctuation">,</span>Number<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">switch</span><span class="token punctuation">(</span>Location<span class="token punctuation">)</span>		<span class="token comment" spellcheck="true">//位码输出</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">case</span> <span class="token number">1</span><span class="token punctuation">:</span>P2_4<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>P2_3<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>P2_2<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span><span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">case</span> <span class="token number">2</span><span class="token punctuation">:</span>P2_4<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>P2_3<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>P2_2<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span><span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">case</span> <span class="token number">3</span><span class="token punctuation">:</span>P2_4<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>P2_3<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>P2_2<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span><span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">case</span> <span class="token number">4</span><span class="token punctuation">:</span>P2_4<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>P2_3<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>P2_2<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span><span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">case</span> <span class="token number">5</span><span class="token punctuation">:</span>P2_4<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>P2_3<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>P2_2<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span><span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">case</span> <span class="token number">6</span><span class="token punctuation">:</span>P2_4<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>P2_3<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>P2_2<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span><span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">case</span> <span class="token number">7</span><span class="token punctuation">:</span>P2_4<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>P2_3<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>P2_2<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span><span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">case</span> <span class="token number">8</span><span class="token punctuation">:</span>P2_4<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>P2_3<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>P2_2<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span><span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    P0<span class="token operator">=</span>NixieTable<span class="token punctuation">[</span>Number<span class="token punctuation">]</span><span class="token punctuation">;</span>	<span class="token comment" spellcheck="true">//段码输出</span>
+    <span class="token function">Delay</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>				<span class="token comment" spellcheck="true">//显示一段时间,否则显示太暗，用于稳定显示</span>
+    P0<span class="token operator">=</span><span class="token number">0x00</span><span class="token punctuation">;</span>				<span class="token comment" spellcheck="true">//段码清0，消影</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">//位选 段选 清零  位选 段选</span>
+</code></pre>
+<p>在.h文件里提供外部可调用函数的声明</p>
+<p><code>Nixie.h</code></p>
+<pre class=" language-c"><code class="language-c"> <span class="token macro property">#<span class="token directive keyword">ifndef</span> __NIXIE_H__</span>
+ <span class="token macro property">#<span class="token directive keyword">define</span> __NIXIE_H__</span>
+ 
+ <span class="token keyword">void</span> <span class="token function">Nixie</span><span class="token punctuation">(</span><span class="token keyword">unsigned</span> <span class="token keyword">char</span> Location<span class="token punctuation">,</span>Number<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ 
+ <span class="token macro property">#<span class="token directive keyword">endif</span></span>
+ 
+</code></pre>
+</li>
+</ul>
 
                 
             </div>
@@ -685,7 +763,7 @@ CPU通过控制寄存器中的数值，在通过驱动器和IO端口相连从而
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">10.3k</span>
+                        class="white-color">11k</span>
             
             
             
