@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="C51, Wgm&#39;s Blog">
+    <meta name="keywords" content="C51(STC89C52), Wgm&#39;s Blog">
     <meta name="description" content="基本思想
 单片机最小应用系统：单片机、晶振、复位电路、电源
 
@@ -24,7 +24,7 @@ CPU通过控制寄存器中的数值，在通过驱动器和IO端口相连从而
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>C51 | Wgm&#39;s Blog</title>
+    <title>C51(STC89C52) | Wgm&#39;s Blog</title>
     <link rel="icon" type="image/jpeg" href="/favicon1.jpg">
     
 
@@ -212,12 +212,12 @@ CPU通过控制寄存器中的数值，在通过驱动器和IO端口相连从而
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">C51</h1>
+                    <h1 class="description center-align post-title">C51(STC89C52)</h1>
                 </div>
             </div>
         </div>
@@ -273,21 +273,21 @@ CPU通过控制寄存器中的数值，在通过驱动器和IO端口相连从而
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-01-15
+                    2023-01-17
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    946
+                    1.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    6 分
                 </div>
                 
 
@@ -311,27 +311,22 @@ CPU通过控制寄存器中的数值，在通过驱动器和IO端口相连从而
 </li>
 <li><p>CPU通过控制寄存器中的数值，在通过驱动器和IO端口相连从而控制外设，同时，也可以从IO端口获得外设的状态，送给寄存器</p>
 </li>
-<li><p>轻触按键：在原理图中，若其公共端接低电平，则按下后，端口获得的值为0，没有按下时端口处于高电平</p>
+<li><p>在单片机中寄存器就是一段特殊的RAM存储器：</p>
+<ul>
+<li><p>寄存器可以存储和读取数据，</p>
 </li>
-<li><p>按键在按下时不其作用，在松手的一瞬间才起作用，<strong>消抖</strong></p>
+<li><p>每一个寄存器背后都连接了一根导线，控制着电路的连接方式</p>
+</li>
+<li><p>可位寻址：可以单独赋值  不可位寻址：只能整体赋值</p>
 </li>
 </ul>
-<pre class=" language-c"><code class="language-c"><span class="token keyword">while</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>P3_1<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//如果按键按下了</span>
-    <span class="token punctuation">{</span>
-        <span class="token function">Delay</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//延迟20ms，过滤掉按下时的抖动</span>
-        <span class="token keyword">while</span><span class="token punctuation">(</span>P3_1<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
-        <span class="token punctuation">{</span>
-            <span class="token comment" spellcheck="true">//这里面什么都不用干，如何按键弹起，则会跳出循环</span>
-        <span class="token punctuation">}</span>
-        <span class="token comment" spellcheck="true">//  while(P3_1==0); 以上和本句结果一样</span>
-        <span class="token function">Delay</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//过滤掉松手抖动</span>
-        P2_0<span class="token operator">=</span><span class="token operator">~</span>P2_0<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//进行正常操作</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<ul>
+</li>
+<li><p>单片机的高电平驱动能力弱，低电平驱动能力强</p>
+</li>
+<li><p>注意寄存器高低位的方向：最左边是高位，最右边是低位</p>
+</li>
+<li><p>单片机IO口模式：弱上拉模式，即准双向口，即其既可以输出，又可以输入。<strong>弱上拉</strong>：输出1的驱动能力有限，输出零的驱动能力强，除此之外，还有其他模式</p>
+<h2 id="数码管"><a href="#数码管" class="headerlink" title="数码管"></a>数码管</h2></li>
 <li><p>数码管 一个单独的，分为共阴极和共阳极，要使其正常工作，共阴极接0，共阳极接1</p>
 </li>
 <li><p>四位一体数码管静态显示：共阴极和共阳极作为位选，四个数码管公用一个段选</p>
@@ -340,13 +335,11 @@ CPU通过控制寄存器中的数值，在通过驱动器和IO端口相连从而
 </li>
 <li><p>74LS138：38译码器，可以通过三个地址端控制八个数码管的位选</p>
 </li>
-<li><p>单片机的高电平驱动能力弱，低电平驱动能力强</p>
-</li>
 <li><p>在数码管的段选和输入间一般会有<strong>双向数据缓冲器</strong>，比如74HC245，其中DIR用于控制方向，既可以给数码管提供段选信号，又可以读取数码管的段选限号，可以用于提高数据的驱动能力</p>
 </li>
-<li><p>注意寄存器高低位的方向：最左边是高位，最右边是低位</p>
-</li>
 <li><p>动态显示数码管+模块化编程</p>
+<p>数码管扫描（输出扫描）原理：显示第1位→显示第2位→显示第3位→……，然后快速循环这个过程，最终实现所有数码管同时显示的效果</p>
+<p><img src="https://s2.loli.net/2023/01/16/PlCfgehKX8r5F2M.png" alt="W9_3@MBSTJ57_LZBBAF8Q_M.png"></p>
 <p>其它.c文件想使用其中的代码时，只需要#include “XXX.h”文件即可</p>
 <p><code>main.c</code></p>
 <pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;REGX52.H></span></span>
@@ -409,6 +402,92 @@ CPU通过控制寄存器中的数值，在通过驱动器和IO端口相连从而
 </code></pre>
 </li>
 </ul>
+<h2 id="按键"><a href="#按键" class="headerlink" title="按键"></a>按键</h2><p><img src="https://s2.loli.net/2023/01/16/L7E65aN4rcvY1yZ.png" alt="63YO5J_F_H0WBPB_HBN0D7D.png"></p>
+<ul>
+<li>轻触按键：在原理图中，若其公共端接低电平，则按下后，端口获得的值为0，没有按下时端口处于高电平</li>
+<li>按键在按下时不其作用，在松手的一瞬间才起作用，<strong>消抖</strong></li>
+</ul>
+<pre class=" language-c"><code class="language-c"><span class="token keyword">while</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>P3_1<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//如果按键按下了</span>
+    <span class="token punctuation">{</span>
+        <span class="token function">Delay</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//延迟20ms，过滤掉按下时的抖动</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>P3_1<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">//这里面什么都不用干，如何按键弹起，则会跳出循环</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment" spellcheck="true">//  while(P3_1==0); 以上和本句结果一样</span>
+        <span class="token function">Delay</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//过滤掉松手抖动</span>
+        P2_0<span class="token operator">=</span><span class="token operator">~</span>P2_0<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//进行正常操作</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+<ul>
+<li>矩阵按键</li>
+</ul>
+<p>采用逐行或逐列的“扫描”，就可以读出任何位置按键的状态</p>
+<p>矩阵键盘扫描（输入扫描）原理：读取第1行(列)→读取第2行(列) →读取第3行(列) → ……，然后快速循环这个过程，最终实现所有按键同时检测的效果</p>
+<ul>
+<li>检测矩阵按键状态，此处采用逐列扫描</li>
+</ul>
+<pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;REGX52.H></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">"Delay.h"</span></span>
+
+<span class="token comment" spellcheck="true">/**
+  * @brief  矩阵键盘读取按键键码
+  * @param  无
+  * @retval KeyNumber 按下按键的键码值
+            如果按键按下不放，程序会停留在此函数，松手的一瞬间，返回按键键码，没有按键按下时，返回0
+  */</span>
+<span class="token keyword">unsigned</span> <span class="token keyword">char</span> <span class="token function">MatrixKey</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">unsigned</span> <span class="token keyword">char</span> KeyNumber<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+    
+    P1<span class="token operator">=</span><span class="token number">0xFF</span><span class="token punctuation">;</span>
+    P1_3<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>P1_7<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token function">Delay</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">while</span><span class="token punctuation">(</span>P1_7<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">Delay</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>KeyNumber<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>P1_6<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token function">Delay</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">while</span><span class="token punctuation">(</span>P1_6<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">Delay</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>KeyNumber<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>P1_5<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token function">Delay</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">while</span><span class="token punctuation">(</span>P1_5<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">Delay</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>KeyNumber<span class="token operator">=</span><span class="token number">9</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>P1_4<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token function">Delay</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">while</span><span class="token punctuation">(</span>P1_4<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">Delay</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>KeyNumber<span class="token operator">=</span><span class="token number">13</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+    
+    P1<span class="token operator">=</span><span class="token number">0xFF</span><span class="token punctuation">;</span>
+    P1_2<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>P1_7<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token function">Delay</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">while</span><span class="token punctuation">(</span>P1_7<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">Delay</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>KeyNumber<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>P1_6<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token function">Delay</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">while</span><span class="token punctuation">(</span>P1_6<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">Delay</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>KeyNumber<span class="token operator">=</span><span class="token number">6</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>P1_5<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token function">Delay</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">while</span><span class="token punctuation">(</span>P1_5<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">Delay</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>KeyNumber<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>P1_4<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token function">Delay</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">while</span><span class="token punctuation">(</span>P1_4<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">Delay</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>KeyNumber<span class="token operator">=</span><span class="token number">14</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+    
+    P1<span class="token operator">=</span><span class="token number">0xFF</span><span class="token punctuation">;</span>
+    P1_1<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>P1_7<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token function">Delay</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">while</span><span class="token punctuation">(</span>P1_7<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">Delay</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>KeyNumber<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>P1_6<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token function">Delay</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">while</span><span class="token punctuation">(</span>P1_6<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">Delay</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>KeyNumber<span class="token operator">=</span><span class="token number">7</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>P1_5<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token function">Delay</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">while</span><span class="token punctuation">(</span>P1_5<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">Delay</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>KeyNumber<span class="token operator">=</span><span class="token number">11</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>P1_4<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token function">Delay</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">while</span><span class="token punctuation">(</span>P1_4<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">Delay</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>KeyNumber<span class="token operator">=</span><span class="token number">15</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+    
+    P1<span class="token operator">=</span><span class="token number">0xFF</span><span class="token punctuation">;</span>
+    P1_0<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>P1_7<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token function">Delay</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">while</span><span class="token punctuation">(</span>P1_7<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">Delay</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>KeyNumber<span class="token operator">=</span><span class="token number">4</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>P1_6<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token function">Delay</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">while</span><span class="token punctuation">(</span>P1_6<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">Delay</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>KeyNumber<span class="token operator">=</span><span class="token number">8</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>P1_5<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token function">Delay</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">while</span><span class="token punctuation">(</span>P1_5<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">Delay</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>KeyNumber<span class="token operator">=</span><span class="token number">12</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>P1_4<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token function">Delay</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">while</span><span class="token punctuation">(</span>P1_4<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">Delay</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>KeyNumber<span class="token operator">=</span><span class="token number">16</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+    
+    <span class="token keyword">return</span> KeyNumber<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="定时器"><a href="#定时器" class="headerlink" title="定时器"></a>定时器</h2><ul>
+<li><p>定时器属于单片机的内部资源</p>
+<ul>
+<li>用于计时系统，可实现软件计时</li>
+<li>替代长时间的Delay</li>
+</ul>
+</li>
+<li><p>工作原理</p>
+</li>
+</ul>
+<p><img src="https://s2.loli.net/2023/01/17/hNXJtq9EzMfmR4i.png" alt="K_V@_9_S0QB0_CIT1QME_@I.png"></p>
+<ul>
+<li>SYSclk：系统时钟，即晶振周期</li>
+</ul>
+<h2 id="中断系统"><a href="#中断系统" class="headerlink" title="中断系统"></a>中断系统</h2><p><img src="https://s2.loli.net/2023/01/17/D8Tnlzpg4vGEOYA.png" alt="image.png"></p>
 
                 
             </div>
@@ -529,9 +608,9 @@ CPU通过控制寄存器中的数值，在通过驱动器和IO端口相连从而
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="C51">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="C51(STC89C52)">
                         
-                        <span class="card-title">C51</span>
+                        <span class="card-title">C51(STC89C52)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -763,7 +842,7 @@ CPU通过控制寄存器中的数值，在通过驱动器和IO端口相连从而
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">11k</span>
+                        class="white-color">11.7k</span>
             
             
             
