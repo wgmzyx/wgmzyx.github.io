@@ -277,7 +277,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    636
+                    647
                 </div>
                 
 
@@ -334,7 +334,9 @@ hexo d <span class="token operator">==</span> hexo deploy
 hexo s -g   <span class="token comment" spellcheck="true"># 生成并本地预览</span>
 hexo d -g   <span class="token comment" spellcheck="true"># 生成并上传</span>
 </code></pre>
-<h2 id="问题及解决方案"><a href="#问题及解决方案" class="headerlink" title="问题及解决方案"></a>问题及解决方案</h2><h5 id="在GitHub上克隆资源时较慢"><a href="#在GitHub上克隆资源时较慢" class="headerlink" title="在GitHub上克隆资源时较慢"></a>在GitHub上克隆资源时较慢</h5><pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># socks5协议，1080端口修改成自己的本地代理端口</span>
+<h2 id="问题及解决方案"><a href="#问题及解决方案" class="headerlink" title="问题及解决方案"></a>问题及解决方案</h2><h5 id="在GitHub上克隆资源时较慢"><a href="#在GitHub上克隆资源时较慢" class="headerlink" title="在GitHub上克隆资源时较慢"></a>在GitHub上克隆资源时较慢</h5><pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#查看设置的属性</span>
+<span class="token function">git</span> config --global -l
+<span class="token comment" spellcheck="true"># socks5协议，1080端口修改成自己的本地代理端口</span>
 <span class="token function">git</span> config --global http.https://github.com.proxy socks5://127.0.0.1:10808
 <span class="token function">git</span> config --global https.https://github.com.proxy socks5://127.0.0.1:10808
 
@@ -345,6 +347,7 @@ hexo d -g   <span class="token comment" spellcheck="true"># 生成并上传</spa
 
 <span class="token comment" spellcheck="true">#取消限定github的代理</span>
 <span class="token function">git</span> config --global --unset http.https://github.com.proxy
+<span class="token function">git</span> config --global --unset https.https://github.com.proxy
 </code></pre>
 <h5 id="http-localhost-4000拒接链接"><a href="#http-localhost-4000拒接链接" class="headerlink" title="http://localhost:4000拒接链接"></a><a href="http://localhost:4000拒接链接">http://localhost:4000拒接链接</a></h5><p>原因：4000端口被占用，使用命令修改端口</p>
 <pre class=" language-bash"><code class="language-bash">hexo s -p 5000    
@@ -352,7 +355,6 @@ hexo d -g   <span class="token comment" spellcheck="true"># 生成并上传</spa
 <h2 id="图床"><a href="#图床" class="headerlink" title="图床"></a>图床</h2><h5 id="方案一：使用免费的"><a href="#方案一：使用免费的" class="headerlink" title="方案一：使用免费的"></a>方案一：使用免费的</h5><p><a target="_blank" rel="noopener" href="https://smms.app/">SM.MS</a></p>
 <h5 id="方案二：gitee-picgo"><a href="#方案二：gitee-picgo" class="headerlink" title="方案二：gitee+picgo"></a>方案二：gitee+picgo</h5><p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1801576?from=article.detail.1789847">Gitee + Typora，搭建自己的免费图床！</a></p>
 <p>可能在未来某一天存在崩溃的风险~~</p>
-<p>git config –global –unset http.<a target="_blank" rel="noopener" href="https://github.com.proxy/">https://github.com.proxy</a></p>
 
                 
             </div>
@@ -701,7 +703,7 @@ hexo d -g   <span class="token comment" spellcheck="true"># 生成并上传</spa
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">11k</span>
+                        class="white-color">11.4k</span>
             
             
             
