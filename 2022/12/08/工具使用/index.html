@@ -257,21 +257,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-01-15
+                    2023-01-27
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.3k
+                    553
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    2 分
                 </div>
                 
 
@@ -338,93 +338,9 @@
 <li><p><code>mv</code>：移动文件夹，<code>mv index.md test</code></p>
 </li>
 </ul>
-<h1 id="git"><a href="#git" class="headerlink" title="git"></a>git</h1><p><a target="_blank" rel="noopener" href="https://kisugitakumi.com/2022/01/18/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">超级详细的git学习笔记</a></p>
-<h4 id="git核心原理"><a href="#git核心原理" class="headerlink" title="git核心原理"></a>git核心原理</h4><p><a target="_blank" rel="noopener" href="https://www.kuangstudy.com/bbs/1490866250686361601">狂神的git核心原理</a></p>
+<h1 id="git"><a href="#git" class="headerlink" title="git"></a>git</h1><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/a18307096730/article/details/124586216?spm=1001.2014.3001.5502">黑马[Git教程]</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.kuangstudy.com/bbs/1490866250686361601">git基本理论</a></p>
 <h4 id="git项目搭建"><a href="#git项目搭建" class="headerlink" title="git项目搭建"></a>git项目搭建</h4><p><a target="_blank" rel="noopener" href="https://www.kuangstudy.com/bbs/1490867665890664450">搭建项目啦</a></p>
-<p><strong>仓库搭建</strong></p>
-<ul>
-<li>本地仓库搭建</li>
-</ul>
-<ol>
-<li>创建全新的仓库</li>
-<li>克隆远程仓库</li>
-</ol>
-<ul>
-<li>远程仓库搭建</li>
-</ul>
-<h4 id="git文件操作"><a href="#git文件操作" class="headerlink" title="git文件操作"></a>git文件操作</h4><h5 id="文件的四种状态"><a href="#文件的四种状态" class="headerlink" title="文件的四种状态"></a>文件的四种状态</h5><blockquote>
-<p>版本控制就是对文件的版本控制</p>
-</blockquote>
-<p>要对文件进行修改、提交等操作，首先要知道文件当前在什么状态。不然可能会提交了现在还不想提交的文件，或者要提交的文件没提交上。</p>
-<p>Git 管理的文件有四种状态：</p>
-<blockquote>
-<p>Untracked：未跟踪</p>
-</blockquote>
-<p>文件刚刚新建时，是未跟踪状态。此文件没有加入到 Git 库，不参与版本控制。通过 <code>git add</code> 变为 <strong>Staged</strong> 状态。此时则处于被跟踪的状态。</p>
-<blockquote>
-<p>Unmodify：未修改</p>
-</blockquote>
-<p>文件加入了 Git 库，未修改。</p>
-<p>版本库中的文件快照内容与文件夹中完全一致。</p>
-<p>这种类型的文件有两种去处：</p>
-<ul>
-<li>如果它被修改，而变为Modified。</li>
-<li>如果使用 <code>git rm</code> 移出版本库，则变为 <strong>Untracked</strong> 状态。</li>
-</ul>
-<blockquote>
-<p>Modified：已修改</p>
-</blockquote>
-<p>仅仅是修改，并没有进行其他的操作。</p>
-<p>这个文件也有两个去处：</p>
-<ul>
-<li>通过 <code>git add</code> 可进入 <strong>Staged</strong> 状态。</li>
-<li>使用 <code>git checkout</code> 放弃修改，返回到 <strong>Unmodify</strong> 状态。</li>
-</ul>
-<p><code>git checkout</code> 是从库中取出文件，覆盖当前修改。</p>
-<blockquote>
-<p>Staged：暂存</p>
-</blockquote>
-<p>执行 <code>git commit</code> 将修改同步到库中。</p>
-<p>这时库中的文件和本地文件又变为一致，文件为 <strong>Unmodify</strong> 状态。</p>
-<p>执行 <code>git reset HEAD filename</code> 取消暂存，文件为 <strong>Modified</strong> 状态。</p>
-<h5 id="查看文件状态"><a href="#查看文件状态" class="headerlink" title="查看文件状态"></a>查看文件状态</h5><blockquote>
-<p>查看指定文件状态</p>
-</blockquote>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> status <span class="token punctuation">[</span>filename<span class="token punctuation">]</span>
-</code></pre>
-<blockquote>
-<p>查看所有文件状态</p>
-</blockquote>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> status
-</code></pre>
-<blockquote>
-<p>添加所有文件到暂存区</p>
-</blockquote>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> add <span class="token keyword">.</span>
-</code></pre>
-<blockquote>
-<p>提交暂存区中的内容到本地仓库 -m提交信息</p>
-</blockquote>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> commit -m
-<span class="token function">git</span> commit -m <span class="token string">"new file hello.txt"</span>
-</code></pre>
-<h5 id="忽略文件"><a href="#忽略文件" class="headerlink" title="忽略文件"></a>忽略文件</h5><p>有时候我们不想把某些文件纳入版本控制中，比如数据库文件、临时文件、设计文件等。</p>
-<blockquote>
-<p>在主目录下建立 <strong>.gitignore</strong> 文件，此文件有如下规则</p>
-</blockquote>
-<ul>
-<li>忽略文件中的空行或以 <strong>#</strong> 开始的行将会被忽略。</li>
-<li>可以使用 Linux 通配符。例如：***** 代表任意多个字符，**?** 代表一个字符，**[ ]** 代表可选字符范围，**{ }** 代表可选的字符串。</li>
-<li>如果名称的最前面有一个 **!**，表示例外规则，将不被忽略。</li>
-<li>如果名称的最前面是一个 **/**，表示要忽略的文件在此目录下，而子目录中的文件不忽略。</li>
-<li>如果名称的最后面是一个 **/**，表示要忽略的是此目录下的所有文件。</li>
-</ul>
-<pre class=" language-bash"><code class="language-bash">*.txt        <span class="token comment" spellcheck="true"># 忽略所有 .txt 结尾的文件，这样的话上传就不会被选中。</span>
-<span class="token operator">!</span>lib.txt     <span class="token comment" spellcheck="true"># lib.txt 除外</span>
-/temp        <span class="token comment" spellcheck="true"># 仅忽略项目根目录下的 temp 文件，不包括其它 temp 目录。</span>
-build/       <span class="token comment" spellcheck="true"># 忽略 build/ 目录下的所有文件。</span>
-doc/*.txt    <span class="token comment" spellcheck="true"># 忽略 doc/notes.txt 但不包括doc/server/arch.txt。</span>
-</code></pre>
 <h1 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h1><h4 id="开发环境搭建"><a href="#开发环境搭建" class="headerlink" title="开发环境搭建"></a>开发环境搭建</h4><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_56597639/article/details/121543691">jdk+IDEA</a></p>
 <h1 id="MATLAB"><a href="#MATLAB" class="headerlink" title="MATLAB"></a>MATLAB</h1><h4 id="修改默认工作路径"><a href="#修改默认工作路径" class="headerlink" title="修改默认工作路径"></a>修改默认工作路径</h4><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/ChijinLoujue/article/details/88582323">如何修改MATLAB默认启动路径</a></p>
 <h4 id="如何解决Matlab启动慢的问题"><a href="#如何解决Matlab启动慢的问题" class="headerlink" title="如何解决Matlab启动慢的问题"></a>如何解决Matlab启动慢的问题</h4><p><a href="%5B(68%E6%9D%A1%E6%B6%88%E6%81%AF">matlab2021b 初始化慢的四种解决办法</a> matlab2021b 初始化慢的四种解决办法_matlab-cc的博客-CSDN博客_matlab初始化时间长](<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_40178853/article/details/123736781">https://blog.csdn.net/qq_40178853/article/details/123736781</a>))</p>
@@ -793,7 +709,7 @@ doc/*.txt    <span class="token comment" spellcheck="true"># 忽略 doc/notes.tx
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">11.7k</span>
+                        class="white-color">11k</span>
             
             
             
