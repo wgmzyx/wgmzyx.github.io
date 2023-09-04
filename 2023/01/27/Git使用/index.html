@@ -232,9 +232,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/git/">
+                                <span class="chip bg-color">git</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -242,8 +246,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/git/" class="post-category">
-                                git
+                            <a href="/categories/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/" class="post-category">
+                                工具使用
                             </a>
                         
                     </div>
@@ -262,21 +266,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-01-27
+                    2023-01-28
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    445
+                    631
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -301,7 +305,7 @@
 </code></pre>
 <h3 id="远程仓库搭建"><a href="#远程仓库搭建" class="headerlink" title="远程仓库搭建"></a>远程仓库搭建</h3><p>使用gitee或者GitHub建立仓库</p>
 <p>设置本机绑定 SSH 公钥，可以实现免密码登录，只需要设置一次</p>
-<p>检查公钥是否连接正常</p>
+<p>在push前可以检查公钥是否连接正常</p>
 <pre class=" language-bash"><code class="language-bash"><span class="token function">ssh</span> -T git@gitee.com
 </code></pre>
 <pre class=" language-bash"><code class="language-bash"><span class="token function">ssh</span> -T git@github.com
@@ -374,6 +378,25 @@ hint: See the <span class="token string">'Note about fast-forwards'</span> <span
 <p>在push前把本地仓库的变化连接到远程仓库master</p>
 <pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> pull origin master --allow-unrelated-histories
 </code></pre>
+<ul>
+<li>在GitHub上克隆资源时较慢</li>
+</ul>
+<pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#查看设置的属性</span>
+<span class="token function">git</span> config --global -l
+<span class="token comment" spellcheck="true"># socks5协议，1080端口修改成自己的本地代理端口，开启此代理后push时不可</span>
+<span class="token comment" spellcheck="true"># 以免密码登录</span>
+<span class="token function">git</span> config --global http.https://github.com.proxy socks5://127.0.0.1:10808
+<span class="token function">git</span> config --global https.https://github.com.proxy socks5://127.0.0.1:10808
+
+<span class="token comment" spellcheck="true"># http协议，1081端口修改成自己的本地代理端口</span>
+<span class="token function">git</span> config --global http.https://github.com.proxy https://127.0.0.1:10809
+<span class="token function">git</span> config --global https.https://github.com.proxy https://127.0.0.1:10809
+<span class="token comment" spellcheck="true">#此处只对github加速，对其他不加速，使用的代理为v2ray中的代理端口</span>
+
+<span class="token comment" spellcheck="true">#取消限定github的代理</span>
+<span class="token function">git</span> config --global --unset http.https://github.com.proxy
+<span class="token function">git</span> config --global --unset https.https://github.com.proxy
+</code></pre>
 
                 
             </div>
@@ -437,7 +460,11 @@ hint: See the <span class="token string">'Note about fast-forwards'</span> <span
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/git/">
+                                    <span class="chip bg-color">git</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -481,43 +508,37 @@ hint: See the <span class="token string">'Note about fast-forwards'</span> <span
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2023/01/27/Git%E4%BD%BF%E7%94%A8/">
+                <a href="/2023/01/28/stm32F103/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="Git使用">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="STM32F10">
                         
-                        <span class="card-title">Git使用</span>
+                        <span class="card-title">STM32F10</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            学习git基本使用,管理项目
+                            
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-01-27
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-01-28
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/git/" class="post-category">
-                                    git
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Wgm
                             
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -540,7 +561,7 @@ hint: See the <span class="token string">'Note about fast-forwards'</span> <span
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            学习51单片机基本思想和器件
                         
                     </div>
                     <div class="publish-info">
@@ -712,7 +733,7 @@ hint: See the <span class="token string">'Note about fast-forwards'</span> <span
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">11.4k</span>
+                        class="white-color">12.5k</span>
             
             
             

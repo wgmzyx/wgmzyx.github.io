@@ -234,12 +234,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Github/">
-                                <span class="chip bg-color">Github</span>
-                            </a>
-                        
                             <a href="/tags/Hexo/">
                                 <span class="chip bg-color">Hexo</span>
+                            </a>
+                        
+                            <a href="/tags/Git/">
+                                <span class="chip bg-color">Git</span>
                             </a>
                         
                     </div>
@@ -270,21 +270,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-01-27
+                    2023-01-28
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    647
+                    482
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -334,22 +334,7 @@ hexo d <span class="token operator">==</span> hexo deploy
 hexo s -g   <span class="token comment" spellcheck="true"># 生成并本地预览</span>
 hexo d -g   <span class="token comment" spellcheck="true"># 生成并上传</span>
 </code></pre>
-<h2 id="问题及解决方案"><a href="#问题及解决方案" class="headerlink" title="问题及解决方案"></a>问题及解决方案</h2><h5 id="在GitHub上克隆资源时较慢"><a href="#在GitHub上克隆资源时较慢" class="headerlink" title="在GitHub上克隆资源时较慢"></a>在GitHub上克隆资源时较慢</h5><pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#查看设置的属性</span>
-<span class="token function">git</span> config --global -l
-<span class="token comment" spellcheck="true"># socks5协议，1080端口修改成自己的本地代理端口</span>
-<span class="token function">git</span> config --global http.https://github.com.proxy socks5://127.0.0.1:10808
-<span class="token function">git</span> config --global https.https://github.com.proxy socks5://127.0.0.1:10808
-
-<span class="token comment" spellcheck="true"># http协议，1081端口修改成自己的本地代理端口</span>
-<span class="token function">git</span> config --global http.https://github.com.proxy https://127.0.0.1:10809
-<span class="token function">git</span> config --global https.https://github.com.proxy https://127.0.0.1:10809
-<span class="token comment" spellcheck="true">#此处只对github加速，对其他不加速，使用的代理为v2ray中的代理端口</span>
-
-<span class="token comment" spellcheck="true">#取消限定github的代理</span>
-<span class="token function">git</span> config --global --unset http.https://github.com.proxy
-<span class="token function">git</span> config --global --unset https.https://github.com.proxy
-</code></pre>
-<h5 id="http-localhost-4000拒接链接"><a href="#http-localhost-4000拒接链接" class="headerlink" title="http://localhost:4000拒接链接"></a><a href="http://localhost:4000拒接链接">http://localhost:4000拒接链接</a></h5><p>原因：4000端口被占用，使用命令修改端口</p>
+<h2 id="问题及解决方案"><a href="#问题及解决方案" class="headerlink" title="问题及解决方案"></a>问题及解决方案</h2><h5 id="http-localhost-4000拒接链接"><a href="#http-localhost-4000拒接链接" class="headerlink" title="http://localhost:4000拒接链接"></a><a href="http://localhost:4000拒接链接">http://localhost:4000拒接链接</a></h5><p>原因：4000端口被占用，使用命令修改端口</p>
 <pre class=" language-bash"><code class="language-bash">hexo s -p 5000    
 </code></pre>
 <h2 id="图床"><a href="#图床" class="headerlink" title="图床"></a>图床</h2><h5 id="方案一：使用免费的"><a href="#方案一：使用免费的" class="headerlink" title="方案一：使用免费的"></a>方案一：使用免费的</h5><p><a target="_blank" rel="noopener" href="https://smms.app/">SM.MS</a></p>
@@ -419,12 +404,12 @@ hexo d -g   <span class="token comment" spellcheck="true"># 生成并上传</spa
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Github/">
-                                    <span class="chip bg-color">Github</span>
-                                </a>
-                            
                                 <a href="/tags/Hexo/">
                                     <span class="chip bg-color">Hexo</span>
+                                </a>
+                            
+                                <a href="/tags/Git/">
+                                    <span class="chip bg-color">Git</span>
                                 </a>
                             
                         </div>
@@ -495,8 +480,12 @@ hexo d -g   <span class="token comment" spellcheck="true"># 生成并上传</spa
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Wgm
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/" class="post-category">
+                                    工具使用
+                                </a>
+                            
                             
                         </span>
                     </div>
@@ -542,8 +531,8 @@ hexo d -g   <span class="token comment" spellcheck="true"># 生成并上传</spa
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    学习笔记
+                            <a href="/categories/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/" class="post-category">
+                                    工具使用
                                 </a>
                             
                             
@@ -703,7 +692,7 @@ hexo d -g   <span class="token comment" spellcheck="true"># 生成并上传</spa
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">11.4k</span>
+                        class="white-color">12.5k</span>
             
             
             
