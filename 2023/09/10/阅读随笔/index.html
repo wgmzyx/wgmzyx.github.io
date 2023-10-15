@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="gitee/github+hexo搭建博客及使用, Wgm&#39;s Blog">
-    <meta name="description" content="搭建博客喽！">
+    <meta name="keywords" content="阅读随笔, Wgm&#39;s Blog">
+    <meta name="description" content="发表点儿加密的东西呦！">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>gitee/github+hexo搭建博客及使用 | Wgm&#39;s Blog</title>
+    <title>阅读随笔 | Wgm&#39;s Blog</title>
     <link rel="icon" type="image/jpeg" href="/favicon1.jpg">
     
 
@@ -205,12 +205,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">gitee/github+hexo搭建博客及使用</h1>
+                    <h1 class="description center-align post-title">阅读随笔</h1>
                 </div>
             </div>
         </div>
@@ -234,12 +234,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Hexo/">
-                                <span class="chip bg-color">Hexo</span>
-                            </a>
-                        
-                            <a href="/tags/Git/">
-                                <span class="chip bg-color">Git</span>
+                            <a href="/tags/%E9%98%85%E8%AF%BB%E9%9A%8F%E7%AC%94/">
+                                <span class="chip bg-color">阅读随笔</span>
                             </a>
                         
                     </div>
@@ -250,8 +246,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%8D%9A%E5%AE%A2/" class="post-category">
-                                博客
+                            <a href="/categories/%E6%9D%82%E8%B0%88/" class="post-category">
+                                杂谈
                             </a>
                         
                     </div>
@@ -263,21 +259,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-01-21
+                    2023-09-10
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-01-28
+                    2023-09-11
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    482
+                    9
                 </div>
                 
 
@@ -299,48 +295,22 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>  之前大一搭建过一次博客，但是由于懒去从来没有用过，最近看见别人高逼格的网站，于是就想着将自己的学习以及生活记录下来，于是一场折腾由此开始~~</p>
-<h2 id="博客搭建过程"><a href="#博客搭建过程" class="headerlink" title="博客搭建过程"></a>博客搭建过程</h2><p><a target="_blank" rel="noopener" href="https://ranchongzhi.github.io/built-blog-1/">利用hexo+Gitee搭建个人网站</a></p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/gongch0604/article/details/100729421">hexo+github+hexo-theme-matery搭建个人免费博客</a></p>
-<h2 id="选择自己喜欢的主题及配置"><a href="#选择自己喜欢的主题及配置" class="headerlink" title="选择自己喜欢的主题及配置"></a>选择自己喜欢的主题及配置</h2><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/mfrank/p/12830097.html">Hexo 主题 Matery 配置</a></p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/victoryxa/article/details/105841309">Hexo+Github博客搭建之Matery主题个性化修改篇（一）</a></p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/victoryxa/article/details/105841440">Hexo+Github博客搭建之Matery主题个性化修改篇（二）</a></p>
-<p><a target="_blank" rel="noopener" href="https://blog.sky03.cn/posts/42790.html#toc-heading-1">Hexo进阶之各种优化</a></p>
-<h2 id="如何写博客"><a href="#如何写博客" class="headerlink" title="如何写博客"></a>如何写博客</h2><ul>
-<li>在本地的<code>sourse\_posts</code>中修改Markdown文件</li>
-<li>在博客跟目录右键单击选择<code>Git Bash Here</code>，执行以下三个命令</li>
-<li>三连：<code>hexo clean</code>, <code>hexo g</code>, <code>hexo d</code> 或者最后 <code>hexo s</code> 本地预览再推送</li>
-</ul>
-<pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#清除缓存以及public文件夹，public文件夹里的东西就是真正被推送到仓库里的东西，每次修改配置文件后都要执行该命令</span>
-hexo c
-<span class="token comment" spellcheck="true">#生成静态页面文件，每次clean后也要重新生成</span>
-hexo g
-<span class="token comment" spellcheck="true">#向仓库推送文件</span>
-hexo d
-</code></pre>
-<h2 id="常见的hexo命令"><a href="#常见的hexo命令" class="headerlink" title="常见的hexo命令"></a>常见的hexo命令</h2><pre class=" language-bash"><code class="language-bash">hexo new <span class="token string">"postName"</span>      <span class="token comment" spellcheck="true"># 新建文章</span>
-hexo new page <span class="token string">"pageName"</span> <span class="token comment" spellcheck="true"># 新建页面</span>
-hexo generate            <span class="token comment" spellcheck="true"># 生成静态页面至public目录</span>
-hexo server              <span class="token comment" spellcheck="true"># 开启预览访问端口（默认端口4000，'ctrl + c'关闭server）</span>
-hexo deploy              <span class="token comment" spellcheck="true"># 部署到GitHub</span>
-hexo <span class="token function">help</span>                <span class="token comment" spellcheck="true"># 查看帮助</span>
-hexo version             <span class="token comment" spellcheck="true"># 查看Hexo的版本</span>
-缩写命令：
-hexo n <span class="token operator">==</span> hexo new
-hexo g <span class="token operator">==</span> hexo generate
-hexo s <span class="token operator">==</span> hexo server
-hexo d <span class="token operator">==</span> hexo deploy
-组合命令：
-hexo s -g   <span class="token comment" spellcheck="true"># 生成并本地预览</span>
-hexo d -g   <span class="token comment" spellcheck="true"># 生成并上传</span>
-</code></pre>
-<h2 id="问题及解决方案"><a href="#问题及解决方案" class="headerlink" title="问题及解决方案"></a>问题及解决方案</h2><h5 id="http-localhost-4000拒接链接"><a href="#http-localhost-4000拒接链接" class="headerlink" title="http://localhost:4000拒接链接"></a><a href="http://localhost:4000拒接链接">http://localhost:4000拒接链接</a></h5><p>原因：4000端口被占用，使用命令修改端口</p>
-<pre class=" language-bash"><code class="language-bash">hexo s -p 5000    
-</code></pre>
-<h2 id="图床"><a href="#图床" class="headerlink" title="图床"></a>图床</h2><h5 id="方案一：使用免费的"><a href="#方案一：使用免费的" class="headerlink" title="方案一：使用免费的"></a>方案一：使用免费的</h5><p><a target="_blank" rel="noopener" href="https://smms.app/">SM.MS</a></p>
-<h5 id="方案二：gitee-picgo"><a href="#方案二：gitee-picgo" class="headerlink" title="方案二：gitee+picgo"></a>方案二：gitee+picgo</h5><p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1801576?from=article.detail.1789847">Gitee + Typora，搭建自己的免费图床！</a></p>
-<p>可能在未来某一天存在崩溃的风险~~</p>
-
+                <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，这个密码看着不太对，请再试试。" data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="fd8c0bdd27683ac7eea1bb8ce0a8f6dded494df6eb8225e2b69bab7c4570e3bd">f4cc23558ba95030556638b09840cfb704f3786c88b878ba14a45b3d167bfac4b7548319f72e65bc5cfc59c8d9143c9aa6252d8129ce3b7023f82503dcc2f79fda43b860092cd5f0df8683abc010a064f356f77bbd3360bba21185cf4aab869868600f4ad2fdb57924b62a01d14d52606544f2a59993782fde1a4bbb2e3884f078aa8f1eee1f20dd76d35468bd54673510cb62b347d3b3475196bab5f372566093ed67581ab2fcf260568e573fb65566eb680c617eca96466dcb5507fec071a3711860e6d8bff9d076362e884bc90067dd1d29ad4337940fbd904892a2b319f42c26fe3ed2696cb98cf4262e14887c7c7e181e986d87da4505f9264e2082f55b863e9edae3dee51506066ad78d2a79d6b97cde29945ca1480007b071eab8dbc44e52022834294dc104fcb454eaa71b86148646de0113598a8cb115a100cd281a9d77ac2ec846389769b6f289ea059df3ced9ce0ae2a7aeb2a230602841541d8c18a41c2298322c4d559b28f0633e6b4b69434cd53f46e45dafceedc9f429a851d7ae3af0bf304f2a65a047528e9860b85995a55a48553f69076a3cf95865dc2ab27e2c7994889f8275ca00aafab00e6c2161e06a412802b54e70a5b65bd9697b2054f360cf943e43b8acb6db391e2b4674aae05f5a7ebcdbab83d1137462311f72ff7a9836a00aecc7f1ba4cf40252ce1831cc18d6f71af03ebfa9fae5559825548c8bb47c00f93d105096195e2c2ce18bd1194f3a4e2ab8e8fb0630a2081a058e0184364a1156ff78ac60353320f22ba32cf4a6e28cf85c45fb8fa88d6ee1740d835b3b72882197259eb1db671da4bdc2bcbf530ea612ed6e1d621da310d9e76708c5508734f7f49841a375c38f679203611fdb21465ea6a36458ff8a74185bf8cd15b30cb1621743b87a9ecc92ca32ad34a3a5728bddc67c4c4a14bfe8effca372ea62da323196d09c08c346624c4160af75219550b596a7b955d50f7a8a8fcf4021df5eae1842a520871e6b49fd4c394fac713a8123cb12669cd7cd1445ac08af99e8ad71fc96397b223a4765a4032fbb518c48e9bd930996e19e23b8f5af5515c8a03aaaeca547883ac52a48bffdddef9e72451a29faf2bfccd64146fc9eb80582bef4ce32268c07a644c5a5443a0ac1c3605270a13a42ec9c8a25c117349166289c56ea4d20d54e61da78e343c1546d416003f13c9fecadae5b872ec0b3e2fe1aed517bb036e62bc0cb78386d4a7f1481290ad308775cc10dd57b6267ea09383d60f27cfef1b894f64981f9d77fd8d57bc503020322423fff2a1582f115774af51b58b9759e7d7c4901ca42f9ff8be9a8414e1b50b7ee943b42ad619faad16d95b918974e3f7e236f1237f17bdb5d08604838c4333579c58f8b6b16d1d300c686538acc0b5920dc476d770bb97322849728084e25e995c6ba2b8ccfe69fb2c06f423e7d76dfb17257a1ca2a1f40b75dad14da7704913744832c7958397d712ae2c080dd2b8580217d77b1bd3bc8712f851097676ead637782e00fcec3ea59bea6ae77c4506b8cbd2446d2efbf548b520e421526ed3440a8f766170c6f55b6fcc2cf04d83a5117afcbee237352a0ad88e7a3bf65972a04baf65d17e65f366153ffb95a427b7ceedd2137770932d6713ec3fc660e9c9a8e6a7025e704d34aa4e534fb0ba3fb505eec3aebc5ae2edac8431908b9be97a52cbcc389a1d11cfc530df08b5b564dbe7f773bb132bfd218990a5efb2d82626e4ebfb9172032b40ea67d4308593c91dc67da8cff217e2a7be1acde2ab00c3accd7ee456249d72129a220a964443649c8bd5da50c75fb764160f1dc20dff91f3fbfcf13bda8540e55d56e9de0c2f3f9d0fbc22365c0e072a063dfd86a6a4bdefac85de48bbe9d55b1a4fc2cd76d8bb57c6beed5e200bbac1a40e1443a7defeea94d6995fb77426e74f2746eb4cf90bd7f7aafa13f51b83976c8add6d93f2ce71d9abc71cd69ddcda8fabac8e10b092107a237df1d4e62ee37fd31b50275b093bb8fd4f8ba6f4509863561c557785ed59c12694c52c0ba21bc89a05e6d392c4c6125d13441678caff831bb771fc7e637b95337c9323d4d294d00bcf1e7c46c62da595e50b815b6a66917e9842c1dac275e11d91a22619f18120ac68802e358daa08b4ab7de2f89fafccc4d312f78630d783d536858e6d940d1bff41f89892548a262f79c403278afab35f34417f1c764c7404ed71b687f1359d21eaa7c26c4d3189302dda6852bd9949a4e8383ca41ffb524f2fdbda7866eaa0d04f6fcb232efb004d3ca505e7bfe43ff79f39134314b064f0d4f1f959db778d49e5ccbf27036ab73c574ad4f54b781527d72a23667acff9175dce1dc5a96d372380e5633bfcd4f4dc94ddd3ff2e8d1f282ad3f4aaece55bbc52c66d1c04e694117a36fc044e71499a026031f4bedac3228c4f5a16c0933c6f3fdcea4d29ac51e634587468bea67a6a2bc4ef81ffb74873e2d9ebcc635160fd26fcc425f88485f67f1b68bc2e101b2a15cacdee411f7fdabd50c99111d42e15e508797ccf8c001de268990fb90379ca67d354526d4c97e6007089c303aa56f6359a2f262cb61087430bfe0590acd00e4beedc147b78b28396ee97ac12583d3fb0fa421dc9d895a1658383af8c82c3d347a0c498209504e3b3f21751192ebdafbdd9e949078c622eec5101fbfcae0b83a0a83236202c97a031bba0a5f818df48c82670755942cef072e3282aef9ff25a001a9f37e724b8c80978075e07ce818af445131dc2fb7abbd9d6383321312b81bbcc9f75ece3d880e16c352b7b9040ac50813e6c8255d06ff8c820be5c6e662461bb4ef51cf41cc710d90798a41ee61c552739ef2c5e1a872691297222574f2e57be506d810526127b49496328911f286d94f562f1504a3d695409a91616e242ea4078520ae8f5ebfaa5ce8c211855b3953ac70c84aff771c74f42ed681e551441bc453c36bea2fa0928367f5f0a325d11ff0d1bde302bc4f949fedc9574adb4a4cde3c43e0a2b5834343b2313a9c22e41e2f69e7bbc67f55318b16c57b9ec23a0447ffff1d59bfc9ee7cef91f21bacaaf1b2c35ad1b1f6107b91edf3767b681d7846f0b1c1c56898d3c6a675ca0f622b3f1a776e70132a6c45984aac3d716263a7be81630fdc5fbe0c7c4caa8f0e0aa38bb1e99ed6e15e100481dd090e774ec936689687f6c9cd4ba226507ee53b94d51fe9029c4c73eaad765f7d245e773dce9b24a82e739af030bc33e148dae352091cca5ad774c1a29cb89bae9e8b37eb9e8cbeb94ca6068b85531b02194a012c7ea6de0dc5609bc56b302044138a9788cb61dcf6e203acefaa89c7d4877526dc764001dea2c6a300cd618d926c58dec8a5d3745d116f2abd9d33e1cbd49af70bf7680653c59a21f6bf95cd2a5f8e863e296571f2ffee495c9ac936282025db1c6608d20deb8993b8acfc2badefe8a182195fdffaa58459f810163ccf78fb85ca53a206992fe1bff651968f3ac4851f3130de87700cce7d1ba19f54f7045a382646b7d003f85e609263d88a1dc9a748fe7b0fbb5338570fb820d4b8c084649084d912b6a64430abbac8eb4df059723de14718571eb448986b5b2460c40e9d62dbbdf04582888bf63f9ecfdc4327c8ac03e7ac407b020aca3e147a0797e38bee09aed92bfe3db63e8548b74ca68c4a00fe478a7145f897fe633db403fc03e45f8dc0e6138d2c409cc9cfc88c7d5b71f3d2739bacf29a333c1c9e9869f950289a120a55142d38af5f076ce55a05f68963f75ad433c0586938a6cf8ba7263c201ec623b285d212854223a3f5bed05ecc91f0f3f2f6204c414d854fc45d4a646c4d65d6906670fed91b12ff19f624457738f6bd49de5732995400e7c5de533570c47f0328ca3941838c15a5f03ad70db6c20a2346c5f0005650699210d936999fc850d7d804f70ae387050a948aa7b290a425d5e8c2781fd73b810dbec0a7f098465bf778bccb6c2a121ed965e21d69f7c15ed9315587c89f93865184c40b190e687cc684f4ea63e6628d566f8db6944eb0ab866c9e346b2a236c629f17a0323042e7e62303cce8dcc373eae518ddcd65141acd3c418aaed15506bd0527022f2bf79a4ec54536abdcb396e5f207942e91e57ba1eac9a33d2bacca7c56a015716c5a6e95a5e83c0a7261ff4db7f5c0ca7333094ddb661d916b027a11eefe15222d2d3435a6dd5532b063add8546ff7caba22d10025c29138fdf7e883bd2c856be2b07f9d4c3865fe3ff005e7e659a6ccb7d8e5a03038890f566a42d3fb2ba0adf4a6cf1f83c6cbb5840acfafbf25c54ed666272ef8935ac9da3bae41508dbe9bc759cf3a05dc23103d76a4c15de0d68634b041ae8d978c45547023b3caa54a2866b4cf5615c3e53967d0b1c9777b8001dc1bcb2da8bac8bf92e880bd6ed136b974382ef0d3167728ac039c8701b9b96b544040fc4ba864c3106e3e7b10b7999365dc7095341aef4141c0bfed73c6346f0364076011013c66f763edceb72b136cd270569c109ae717ba8c7815b705fe291781b50e456874a54ce710f0974ac252c3039bf4dd1da97d73f58dc3fa1642324eb3599f2d87478c4256697374490f1dee14b47384b1e7d127a02a71bd93aec0c52783e4019f9916e844023a65381e9bbafd6fda2b205e24129e4773d8b5118085fdfcc75c14c9370c2b88c9d794745c45e3a834a8e3a8cd6d961dd6662e796db50a5d4db517f05e5f8b0f1b18cf36e89554cda45fe0d7d56a386d6662f8ee42305877c4db45bb2f04f5414c397b37307f2ab65bbfd522d9f52a8bc0e35ec346aa066316d4ec3f20dc60f22606782a6091ba5b7ca574dad21f16129e69c0694f2b26605a5bb50080639b5b99f886eade1bde188e0e7e7de224d783431166f04a954bb3f557ba1145677201019d8c776a0e45dc10f5a254026e16c17d1aa5861a29214ec108c60ddefbdffbfcdfca2383eef1c740ed9db00e513941beb35d971a549fd4b48a060604df43655a31b217c1f0ffaf670909519e91639907c52bd510dad30246101527b7d571c22bea04f05f554676e43d0f4d8e6c7b444408c4c618505d19e68253277bc57e2321ac161addaf09a915c239efa0039d79cf2eed9b308fb5091351b7f547a61643ec6586e92f40707630db5dd475d4fed62f56ceee27a6ed17faac66c84be3906c201608f29e68c68fe4572338334ce308b73ee2e8c1e05052854cd7866e3eb470b91f921eb5b9e268980caa33cbf9906432d75985a6d0d9301f375725d2da48b641a2a4221ee6b8ceea26dd1fd4c7415b8da4b51efe1b8484c87890b82a17321a70f38b50b239f3437d81b6b5fdb3073d43e2fe343032165a96ee7497dfefd5dbfc6b2d0086d886039b6945273ca427a1e895acfc4f6c4d725e9176dbafe0d6ec58554c8fdd59ff91a1ebf7aa43f383f17cae26d5e171456767e8508c0dc49946fb3ae3361e954bb4b81d03c27fc9ffdc6fe3a9bf3c69d81aee2ff04906894779522a5c967d8f7fdaa3270a41d362bbc2b146c4d2f1252cb20edc8484002526a605a67527b0aa32d1affac13fea85fa6a474480299acb28abf8998508224c176b96a8ce5564bc399f0ea4bb7e360a34a0f4d2c6088adcfa039cc65428822bafe4b587c52ae9a837a4da63c228844dbb60f01d455af5571910286e5da58aa4ea7e4a482ed7a73e4fa8437703bc2e33491c7eb65ed16980a114740c055e5e53b0d7e64a1b4967f86c5c37c8b55f97d6e7a83eb7530aecb7a89f5ee787d14281c9255db8ee14f15d53a8b109ae3bcba09e2a287b73224b1bdeca7fbb7927b1289954b0510bbad40d9bba3eae61622915e9d504c3d27cd8b15a9ca68fba1793113df0c0573e5c244833f5273df0708c01d03a38bad18054f04c915897a0827de384c18e16a5d3d8bd4f00bcf2623661a1b8f45fd59c3549fba8585ac5a811b3d4add92d13125a33715468acbdd708fcb75f466240c649cd7652f4ae95a7eaac4f780d050154d8d6ea716f68925d80d1336b98bd890a2841556a705671ba4209ac1c3f233ebde1a07a0b61781ddfd4b3f074eed81007a8e613f8180441ef28779feebd1105a3a16addd7e62c734eda1bddf879cbe0fb9dc24b9cb9de49fcfbbf152ba9b1c32e4a2712673df3a4cc00afd53524e3b0462edd28aece8e41300e9d18d1157dadd2acc10c4876c709bd66642af8fc3287023e231701fa4d0e739270aabdc908aab40e24b37fa28d89204132ba708f325a81df43df3e3c4bff9c28e4d55140054f8d5be812b2343eb1f1c405d1e047457260af36da4063d6ce6a5d65bf51883453b64eb118e9a1909af2a9da3f95fde17458a802a860df37a1210ba08f10e299db96fb1bb1ec622884534bf3a2a10e2d755383e1859dd6376f29d31c4bdf0b47960e9d6a7d4c92317550dc5d86e58cef2571295e593b7d0df30c6b7f716fe973b96b8d8b8c53e11977b9fd79ba45c421d34c0513ac3defb6cc0e6307cd30febd2d9d1cd2de5e6d59014844e9d7365bf068d858048869b1668298254529f615127bbc2abf8fdaa6dcd0b76432d7ad286b34e62df2c7ae3686571499d46a7ba398ef794cf11676313651a9d0295d0f27681435944d9e2cd9486031311989b84f1415a276bb0657c3391b3a6bfb5c626a8bee84de8cd1ca1d16b2b69644c43cd8d1ba7d721fdd0e02f2e20baa33f72cd5a5372692ab792c160326d832caef10acfeb83b1fbfa19942712a689fbecc04056d14a4e51fafd7dfe932813e0e03151d5b5e793f3e2d4d7215d2b16af0447dbfa81e482e61708ecd873a36cbbf25fee3960de4b8635284dfcceb1a7f8e59ace903797a96179c2f6372eaf40b82d72010586e2c3b916b7a0f549fbdfd560367aee5932c8f41ad9e693851b3e991bf4a02edd428d216a0ebaed969d8336140039284f0a39c6cde0a058d165a82f58071925dadb46b5fcbfd9ca58cb4277e6e4fdfa8e301b92aa9731efabbece1dea1a0c8af1b323c417f097fcea08cfd8fa81df8c1031ad72bba86d5213336b53f037c4fac375ecaafdaab36063c72ed75092e839320dbcb25f8cf609074bf7cad428b0cef87d8d8e8eb92575874cbc3faec9d5cb789812de639d62ff43a710024e657b72e2d09eb1710dd7c81ccf92e9c2d2a26204171991a7840c01a28bbc93b09b33f0c86c5d8ca99809e771f633b5b524a48647e259f89b5737db5fa687b21f086700682faf95a1c6fd66ac7da0b005636a11b685a3c12fbbe26d7360caee2cb934bb09f983d8e33f84ad632f83b07ae3b5ad4128d5d0b496ea75ec861990a2bbc80f68c4755edef62742b0cce9acba7dc75d9871674283007fae3e846019c8bd74f38adda345c40b8859ba32ad930e657e861a27f832858841182061c53467c4455b83a1b3c73481afa9557293b22fdc47a9b9a9a7aa50dcd67f4deb9b92bfd53061c3434a0c18b666af71b31876c81ac34a5ce1f017ce89db32d273fda16b0edb18e7d4b60eaf6ba4377c0acb1e3384e1563eb908b6979250a47abf6c5a30fb90c5a76d392825dda70906d19c122c9aab7377a15c3bfeab86db4bcfd30c6abb3d64401e11fd4193f7bf67f6aa3312aaa24ebb9c11219edf5782611a1dba61fbeea801eede5d94489fff12ad856b4fa6cfb785d1f90ea203ed0e9c88da0416bc056f27111f65534fdbed49893f61045f6278015271eb59583a6bee95a00cb12b8c6976637e02ae56dcf5a46db01c9028ac5808205ec90051ad6bdb2a3e636ea8f075177dcb47ed0a6f736e4a4a570980019dc773fa11c9c3891888456ee7e0ef48048e01f0deebd426f16bbfb073a96bfc9f4854b6c85a12f832d75ba5bb0f4cc4c779cd237a625cdfdfbe69264a8ae6c5a59156688244cd7bf874745dc0935f315bd09771d107963d00bfa00709da14db9ec88b359e64e914e70643b245fa6ea4a1e397383bd987877423ad7fb73dcedbcd13adea53486285a61f7a28a318e1a69ac5a230d0ea3d0e008f4f79e4a7011d1ea3f4922c18a5d24c81a6caf6c5f97faf2c691854e14e3a967c56f0da35b67134f5eeabcebc523be38503650949484975ec4e5d49e46cf9303e2debf2d7b9a638b609e6e4499d93740352ef3009b0a9fea071bd7e797baef7b7dd0b2039d4eba699f6bc637a8029bd03c7f8936838d8be412916fc9cdd5aa9f166bf6f4edb604cc4665fa2e862cdfa9c04baf8a45ff9f7a877cbf2c51ad76cf412f49082dbd65a60e998e0e5ce103dc1f2d478d8dd46520c13fd67a57fa0cb5e78345db5c9b22b4d6140095da1c2953304c0dc8804151be6eb2d49f6f5e6533aa5db5a5937a4f93048ac0331bc66ec855b5243dcb0d47a5f706233667fd4ecb33e8b9e22c8c901d4b06d7b1dab714738dfaf547a6867927c217e088d9931ee33d0aa78e561d43b89e6fd573c7da372f3eeef01a1c4853d1bef58a2386c6fbab27ec3ef4cc0bcb640f3ba50c0ef3612d0b23124f8dca364e7142df339e8dc3ce1115ab2dd3e0f77ff1b4e26354c55b85f4825d7ea21a31551296b67f5ae92b3621796f2e065169b72f75156f832ccda63ac3c8f2cdc2a04f030bb6e590fae00f9e77ae3228f440cbd413580cd7f0a441f70cd5a43f4573d3ff47f469869302b7a1b9baa4a41695d3c43d35e3924322922a92db1ff735845bc3876a212d74d06833b7db5615bb78afe7b5717e4992d47e0855248675eefc3fea3bddb166d159fbe2fad8b0d0a67112a95b789311b8e6adeaa2c8f5c6cf06864cc85fe18412d270f63585a0ed4902197f7213a09f90ff2b8c715dcf6c6af13d80bdf508f0c2c133ea4d8408d607fd311bb4556e8cf2abb5a6fbb5ba5483363de5d58bf95ca5debee554018c3f3d1496e522a9ad022e859b1c294ee8e4075158c71f2d8d7f156e7a362962fefd92ba05e7d7ba7119edb3c8020e67b21f720c0afcbd74d4d4823ed1639891515befe78325e3778420299943671b227171a5</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-xray">
+      <input class="hbe hbe-input-field hbe-input-field-xray" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-xray" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-xray">您好，这里需要密码。</span>
+      </label>
+      <svg class="hbe hbe-graphic hbe-graphic-xray" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+        <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>
+        <path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0"></path>
+      </svg>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
                 
             </div>
             <hr/>
@@ -366,7 +336,7 @@ hexo d -g   <span class="token comment" spellcheck="true"># 生成并上传</spa
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2022/01/21/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%8F%8A%E4%BD%BF%E7%94%A8/">http://example.com/2022/01/21/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%8F%8A%E4%BD%BF%E7%94%A8/</a>
+                    <a href="http://example.com/2023/09/10/%E9%98%85%E8%AF%BB%E9%9A%8F%E7%AC%94/">http://example.com/2023/09/10/%E9%98%85%E8%AF%BB%E9%9A%8F%E7%AC%94/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -404,12 +374,8 @@ hexo d -g   <span class="token comment" spellcheck="true"># 生成并上传</spa
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Hexo/">
-                                    <span class="chip bg-color">Hexo</span>
-                                </a>
-                            
-                                <a href="/tags/Git/">
-                                    <span class="chip bg-color">Git</span>
+                                <a href="/tags/%E9%98%85%E8%AF%BB%E9%9A%8F%E7%AC%94/">
+                                    <span class="chip bg-color">阅读随笔</span>
                                 </a>
                             
                         </div>
@@ -459,44 +425,32 @@ hexo d -g   <span class="token comment" spellcheck="true"># 生成并上传</spa
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/12/08/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/">
+                <a href="/2023/09/20/%E7%BD%91%E9%A1%B5%E5%B7%A5%E5%85%B7%E6%B1%87%E6%80%BB/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="工具使用">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="网页工具汇总">
                         
-                        <span class="card-title">工具使用</span>
+                        <span class="card-title">网页工具汇总</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            本文介绍常用资料。
+                            
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-12-08
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-09-20
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/" class="post-category">
-                                    工具使用
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Wgm
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/">
-                        <span class="chip bg-color">工具使用</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -508,44 +462,36 @@ hexo d -g   <span class="token comment" spellcheck="true"># 生成并上传</spa
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/01/21/Markdown%E7%9A%84%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/">
+                <a href="/2023/09/05/FPGA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="Markdown的学习总结">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="FPGA学习笔记">
                         
-                        <span class="card-title">Markdown的学习总结</span>
+                        <span class="card-title">FPGA学习笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            本文总结markdown学习中的部分语法！
+                            一段新的学习要开启了，Way to go!
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-21
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-09-05
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/" class="post-category">
-                                    工具使用
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    学习笔记
                                 </a>
                             
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Markdown/">
-                        <span class="chip bg-color">Markdown</span>
-                    </a>
-                    
                 </div>
                 
             </div>

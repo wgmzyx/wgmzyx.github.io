@@ -4,8 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Wgm&#39;s Blog">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="基于Matlab的雷达信号处理仿真, Wgm&#39;s Blog">
+    <meta name="description" content="1
+function [dt, prf, pav, ep, ru] = pulse_train(tau, pri, p_peak)
+% computes duty cycle(占空因子), average transmitted power">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +19,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | Wgm&#39;s Blog</title>
+    <title>基于Matlab的雷达信号处理仿真 | Wgm&#39;s Blog</title>
     <link rel="icon" type="image/jpeg" href="/favicon1.jpg">
     
 
@@ -205,12 +207,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">基于Matlab的雷达信号处理仿真</h1>
                 </div>
             </div>
         </div>
@@ -246,28 +248,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-09-04
+                    2023-10-09
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-09-04
+                    2023-10-09
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    73
+                    776
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    4 分
                 </div>
                 
 
@@ -282,19 +284,142 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span>
+                <p>1</p>
+<pre class=" language-matlab"><code class="language-matlab"><span class="token keyword">function</span> <span class="token punctuation">[</span>dt<span class="token punctuation">,</span> prf<span class="token punctuation">,</span> pav<span class="token punctuation">,</span> ep<span class="token punctuation">,</span> ru<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">pulse_train</span><span class="token punctuation">(</span>tau<span class="token punctuation">,</span> pri<span class="token punctuation">,</span> p_peak<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">% computes duty cycle(占空因子), average transmitted power, pulse energy, and pulse repetition frequency</span>
+<span class="token comment" spellcheck="true">% Inputs:</span>
+    <span class="token comment" spellcheck="true">%   tau    == Pulsewidth in seconds 脉冲宽度</span>
+    <span class="token comment" spellcheck="true">%   pri    == Pulse repetition interval in seconds  脉冲重复间隔</span>
+    <span class="token comment" spellcheck="true">%   p_peak == Peak power in Watts 峰值功率</span>
+%
+<span class="token comment" spellcheck="true">% Outputs:</span>
+    <span class="token comment" spellcheck="true">%   dt    == Duty cycle - unitless</span>
+    <span class="token comment" spellcheck="true">%   prf   == Pulse repetition frequency in Hz</span>
+    <span class="token comment" spellcheck="true">%   pa    == Average power in Watts</span>
+    <span class="token comment" spellcheck="true">%   ep    == Pulse energy in Joules 脉冲能量</span>
+    <span class="token comment" spellcheck="true">%   ru    == Unambiguous range in Km 非模糊距离</span>
+%
+c <span class="token operator">=</span> <span class="token number">3e8</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">% speed of light</span>
+dt <span class="token operator">=</span> tau <span class="token operator">/</span> pri<span class="token punctuation">;</span>
+prf <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">.</span> <span class="token operator">/</span> pri<span class="token punctuation">;</span>
+pav <span class="token operator">=</span> p_peak <span class="token operator">*</span> dt<span class="token punctuation">;</span>
+ep <span class="token operator">=</span> p_peak <span class="token operator">*</span> tau<span class="token punctuation">;</span>
+ru <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">.</span>e<span class="token number">-3</span> <span class="token operator">*</span> c <span class="token operator">*</span> pri <span class="token operator">/</span><span class="token number">2.0</span><span class="token punctuation">;</span>
+<span class="token keyword">return</span>
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server
+<p>2</p>
+<pre class=" language-matlab"><code class="language-matlab"><span class="token keyword">function</span> <span class="token punctuation">[</span>delta_R<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">range_resolution</span><span class="token punctuation">(</span>var<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">% This function computes radar range resolution in meters 距离分辨率</span>
+%
+<span class="token comment" spellcheck="true">% Inputs:</span>
+    <span class="token comment" spellcheck="true">% var can be either</span>
+        <span class="token comment" spellcheck="true">% var == Bandwidth in Hz</span>
+        <span class="token comment" spellcheck="true">% var == Pulsewidth in seconds 脉冲宽度</span>
+<span class="token comment" spellcheck="true">%    </span>
+<span class="token comment" spellcheck="true">% Outputs:</span>
+    <span class="token comment" spellcheck="true">% delta_R == range resolution in meters</span>
+<span class="token comment" spellcheck="true">%    </span>
+<span class="token comment" spellcheck="true">% Bandwidth may be equal to (1/pulse width)==> indicator = seconds</span>
+%
+c <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">.</span>e<span class="token operator">+</span><span class="token number">8</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">% speed of light</span>
+indicator <span class="token operator">=</span> <span class="token function">input</span><span class="token punctuation">(</span><span class="token string">'Enter 1 for var == Bandwidth, OR 2 for var == Pulsewidth \n'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">switch</span><span class="token punctuation">(</span>indicator<span class="token punctuation">)</span>
+    <span class="token keyword">case</span> <span class="token number">1</span>
+        delta_R <span class="token operator">=</span> c <span class="token operator">/</span> <span class="token number">2.0</span> <span class="token operator">/</span> var<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">% del_r = c/2B</span>
+    <span class="token keyword">case</span> <span class="token number">2</span>
+        delta_R <span class="token operator">=</span> c <span class="token operator">*</span> var <span class="token operator">/</span> <span class="token number">2.0</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">% del_r = c*tau/2</span>
+<span class="token keyword">end</span>
+<span class="token keyword">return</span>
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate
+<p>3</p>
+<pre class=" language-matlab"><code class="language-matlab"><span class="token keyword">function</span> <span class="token punctuation">[</span>fd<span class="token punctuation">,</span> tdr<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">doppler_freq</span> <span class="token punctuation">(</span>freq<span class="token punctuation">,</span> ang<span class="token punctuation">,</span> tv<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">% This function computes Doppler frequency and time dilation factor ratio</span>
+<span class="token comment" spellcheck="true">% tau_prime / tau 时间扩张因子</span>
+<span class="token comment" spellcheck="true">% </span>
+<span class="token comment" spellcheck="true">% Inputs:</span>
+    <span class="token comment" spellcheck="true">% freq  == radar operating frequency in Hz</span>
+    <span class="token comment" spellcheck="true">% ang   == target aspect angle in degrees 姿态角</span>
+    <span class="token comment" spellcheck="true">% tv    == target velocity in m/sec 目标速度</span>
+<span class="token comment" spellcheck="true">%    </span>
+<span class="token comment" spellcheck="true">% Outputs:</span>
+    <span class="token comment" spellcheck="true">% fd    == Doppler frequency in Hz </span>
+    <span class="token comment" spellcheck="true">% tdr   == time dilation factor; unitless 时间扩张因子</span>
+<span class="token comment" spellcheck="true">%靠近目标 后退目标</span>
+format long
+indicator <span class="token operator">=</span> <span class="token function">input</span><span class="token punctuation">(</span><span class="token string">'Enter 1 for closing target, OR 2 for opening target \n'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+c <span class="token operator">=</span> <span class="token number">3.0e+8</span><span class="token punctuation">;</span>
+ang_rad <span class="token operator">=</span> ang <span class="token operator">*</span> <span class="token keyword">pi</span> <span class="token operator">/</span><span class="token number">180</span><span class="token punctuation">;</span>
+lambda <span class="token operator">=</span> c <span class="token operator">/</span> freq<span class="token punctuation">;</span>
+<span class="token keyword">switch</span><span class="token punctuation">(</span>indicator<span class="token punctuation">)</span>
+    <span class="token keyword">case</span> <span class="token number">1</span>
+        fd <span class="token operator">=</span> <span class="token number">2.0</span> <span class="token operator">*</span> tv <span class="token operator">*</span> <span class="token function">cos</span><span class="token punctuation">(</span>ang_rad<span class="token punctuation">)</span> <span class="token operator">/</span> lambda<span class="token punctuation">;</span>
+        tdr <span class="token operator">=</span> <span class="token punctuation">(</span>c <span class="token operator">-</span> tv<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token punctuation">(</span>c <span class="token operator">+</span> tv<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">case</span> <span class="token number">2</span>
+        fd <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">2.0</span> <span class="token operator">*</span> c <span class="token operator">*</span> tv <span class="token operator">*</span> <span class="token function">cos</span><span class="token punctuation">(</span>and_rad<span class="token punctuation">)</span> <span class="token operator">/</span> lambda<span class="token punctuation">;</span>
+        tdr <span class="token operator">=</span> <span class="token punctuation">(</span>c <span class="token operator">+</span> tv<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token punctuation">(</span>c <span class="token operator">-</span>tv<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span>
+<span class="token keyword">return</span>
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy
+<p>4 $(SNR)_o=(P_tG^2\lambda^2\sigma)/((4\pi)^3kT_oBFLR^4)$</p>
+<pre class=" language-matlab"><code class="language-matlab"><span class="token keyword">function</span> <span class="token punctuation">[</span>snr<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">radar_eq</span><span class="token punctuation">(</span>pt<span class="token punctuation">,</span> freq<span class="token punctuation">,</span> g<span class="token punctuation">,</span> sigma<span class="token punctuation">,</span> b<span class="token punctuation">,</span> nf<span class="token punctuation">,</span> loss<span class="token punctuation">,</span> range<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">% This function implements Eq. (2.22) of textbook</span>
+%
+<span class="token comment" spellcheck="true">% Inputs:</span>
+        <span class="token comment" spellcheck="true">% pt        == input peak power in Watts</span>
+        <span class="token comment" spellcheck="true">% freq      == radar operating frequency in Hz</span>
+        <span class="token comment" spellcheck="true">% g         == antenna gain in dB</span>
+        <span class="token comment" spellcheck="true">% sigma     == radar cross section in meter squared 目标截面积</span>
+        <span class="token comment" spellcheck="true">% b         == radar bandwidth in Hz</span>
+        <span class="token comment" spellcheck="true">% nf        == noise Figure in dB</span>
+        <span class="token comment" spellcheck="true">% loss      == total radar losses in dB 雷达损耗</span>
+        <span class="token comment" spellcheck="true">% range     == range to target (single value or vector) in Km 目标距离</span>
+<span class="token comment" spellcheck="true">%    </span>
+<span class="token comment" spellcheck="true">% Outputs:</span>
+        <span class="token comment" spellcheck="true">% snr       == SNR in dB     </span>
+<span class="token comment" spellcheck="true">% </span>
+c <span class="token operator">=</span> <span class="token number">3.0e+8</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">% speed of light</span>
+lambda <span class="token operator">=</span> c <span class="token operator">/</span> freq<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">% wavelength</span>
+p_peak <span class="token operator">=</span> <span class="token number">10</span><span class="token operator">*</span><span class="token function">log10</span><span class="token punctuation">(</span>pt<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">% convert peak power to dB</span>
+lambda_sqdb <span class="token operator">=</span> <span class="token number">10</span><span class="token operator">*</span><span class="token function">log10</span><span class="token punctuation">(</span>lambda<span class="token operator">^</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">% compute wavelength square in dB</span>
+sigmadb <span class="token operator">=</span> <span class="token number">10</span><span class="token operator">*</span><span class="token function">log10</span><span class="token punctuation">(</span>sigma<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">% convert sigma to dB</span>
+four_pi_cub <span class="token operator">=</span> <span class="token number">10</span><span class="token operator">*</span><span class="token function">log10</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token number">4.0</span> <span class="token operator">*</span> <span class="token keyword">pi</span><span class="token punctuation">)</span><span class="token operator">^</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">% (4pi)^3 in dB</span>
+k_db <span class="token operator">=</span> <span class="token number">10</span><span class="token operator">*</span><span class="token function">log10</span><span class="token punctuation">(</span><span class="token number">1.38e-23</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">% Boltzman's constant in dB</span>
+to_db <span class="token operator">=</span> <span class="token number">10</span><span class="token operator">*</span><span class="token function">log10</span><span class="token punctuation">(</span><span class="token number">290</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">% noise temp. in dB</span>
+b_db <span class="token operator">=</span> <span class="token number">10</span><span class="token operator">*</span><span class="token function">log10</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">% bandwidth in dB</span>
+range_pwr4_db <span class="token operator">=</span> <span class="token number">10</span><span class="token operator">*</span><span class="token function">log10</span><span class="token punctuation">(</span>range<span class="token operator">.^</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">% vector of target range^4 in dB</span>
+<span class="token comment" spellcheck="true">% Implement Equation (2.22)</span>
+num <span class="token operator">=</span> p_peak <span class="token operator">+</span> g <span class="token operator">+</span> g <span class="token operator">+</span> lambda_sqdb <span class="token operator">+</span> sigmadb<span class="token punctuation">;</span>
+den <span class="token operator">=</span> four_pi_cub <span class="token operator">+</span> k_db <span class="token operator">+</span> to_db <span class="token operator">+</span> b_db <span class="token operator">+</span> nf <span class="token operator">+</span> loss <span class="token operator">+</span> range_pwr4_db<span class="token punctuation">;</span>
+snr <span class="token operator">=</span> num <span class="token operator">-</span> den<span class="token punctuation">;</span>
+<span class="token keyword">return</span>
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>5 低PRF雷达—-相干脉冲积累数$n_p$ 波束照射目标的时间较长</p>
+<p>$(SNR)_{n_p}=(P_tG^2\lambda^2\sigma n_p)/((4\pi)^3kT_oBFLR^4)$</p>
+<p>6 高PRF雷达—-不可忽略接受占空因子$t_r$</p>
+<p>$SNR=(P_tG^2\lambda^2\sigma d_t^2)/((4\pi)^3kT_oBFLR^4d_r)$</p>
+<p>$d_r=d_t=\tau f_r$    $B=1/T_i$   $T_i$目标上的时间</p>
+<p>$SNR=(P_t\tau f_r T_iG^2\lambda^2\sigma )/((4\pi)^3kT_oFLR^4)$</p>
+<p>$SNR=(P_{av}T_iG^2\lambda^2\sigma )/((4\pi)^3kT_oFLR^4)$</p>
+<pre class=" language-matlab"><code class="language-matlab"><span class="token comment" spellcheck="true">% Generates Figure 3.6 of text</span>
+<span class="token comment" spellcheck="true">%线性调频波LFM</span>
+close all
+clear all
+LFM_BW <span class="token operator">=</span> <span class="token number">15e6</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">%带宽</span>
+tau <span class="token operator">=</span> <span class="token number">1e-6</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">%脉冲宽度</span>
+ts <span class="token operator">=</span> <span class="token number">1e-9</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">% 1000 samples per PW</span>
+beta <span class="token operator">=</span> LFM_BW<span class="token operator">/</span>tau<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">%线性调频系数</span>
+t <span class="token operator">=</span> <span class="token number">0</span><span class="token operator">:</span> ts<span class="token operator">:</span> <span class="token operator">+</span>tau<span class="token punctuation">;</span>
+S <span class="token operator">=</span> <span class="token function">exp</span><span class="token punctuation">(</span><span class="token number">j</span><span class="token operator">*</span><span class="token keyword">pi</span><span class="token operator">*</span>beta<span class="token operator">*</span><span class="token punctuation">(</span>t<span class="token operator">.^</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+figure
+<span class="token function">subplot</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">plot</span><span class="token punctuation">(</span>t<span class="token operator">*</span><span class="token number">1e6</span><span class="token punctuation">,</span><span class="token function">imag</span><span class="token punctuation">(</span>S<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token string">'linewidth'</span><span class="token punctuation">,</span><span class="token number">1.5</span><span class="token punctuation">)</span><span class="token punctuation">,</span> grid
+<span class="token function">ylabel</span><span class="token punctuation">(</span><span class="token string">'Up-chirp LFM'</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">% The matched filter for S(t) is S*(-t)</span>
+t <span class="token operator">=</span> <span class="token operator">-</span>tau<span class="token operator">:</span> ts<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+Smf <span class="token operator">=</span> <span class="token function">exp</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">j</span><span class="token operator">*</span><span class="token keyword">pi</span><span class="token operator">*</span>beta<span class="token operator">*</span><span class="token punctuation">(</span>t<span class="token operator">.^</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">subplot</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">plot</span><span class="token punctuation">(</span>t<span class="token operator">*</span><span class="token number">1e6</span><span class="token punctuation">,</span><span class="token function">imag</span><span class="token punctuation">(</span>Smf<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token string">'linewidth'</span><span class="token punctuation">,</span><span class="token number">1.5</span><span class="token punctuation">)</span><span class="token punctuation">,</span> grid
+<span class="token function">xlabel</span><span class="token punctuation">(</span><span class="token string">'time in microseconds'</span><span class="token punctuation">)</span>
+<span class="token function">ylabel</span><span class="token punctuation">(</span><span class="token string">'Down-chirp LFM'</span><span class="token punctuation">)</span>
+</code></pre>
 
                 
             </div>
@@ -321,7 +446,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2023/09/04/hello-world/">http://example.com/2023/09/04/hello-world/</a>
+                    <a href="http://example.com/2023/10/09/%E5%9F%BA%E4%BA%8EMatlab%E7%9A%84%E9%9B%B7%E8%BE%BE%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86%E4%BB%BF%E7%9C%9F/">http://example.com/2023/10/09/%E5%9F%BA%E4%BA%8EMatlab%E7%9A%84%E9%9B%B7%E8%BE%BE%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86%E4%BB%BF%E7%9C%9F/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -407,13 +532,13 @@
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2023/09/04/hello-world/">
+                <a href="/2023/10/09/%E5%9F%BA%E4%BA%8EMatlab%E7%9A%84%E9%9B%B7%E8%BE%BE%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86%E4%BB%BF%E7%9C%9F/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="基于Matlab的雷达信号处理仿真">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">基于Matlab的雷达信号处理仿真</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -424,7 +549,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-09-04
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-09
                             </span>
                         <span class="publish-author">
                             
@@ -445,13 +570,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/01/28/stm32F103/">
+                <a href="/2023/10/08/Matlab%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="STM32F10">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="Matlab学习笔记">
                         
-                        <span class="card-title">STM32F10</span>
+                        <span class="card-title">Matlab学习笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -462,7 +587,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-01-28
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-08
                             </span>
                         <span class="publish-author">
                             
@@ -617,7 +742,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">12.6k</span>
+                        class="white-color">15.8k</span>
             
             
             
