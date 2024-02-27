@@ -1,0 +1,1185 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="雷达学习笔记, Wgm&#39;s Blog">
+    <meta name="description" content="雷达学子资料汇总">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>雷达学习笔记 | Wgm&#39;s Blog</title>
+    <link rel="icon" type="image/jpeg" href="/favicon1.jpg">
+    
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 6.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Wgm&#39;s Blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Wgm&#39;s Blog</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">雷达学习笔记</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E9%9B%B7%E8%BE%BE/">
+                                <span class="chip bg-color">雷达</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
+                                学习笔记
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2024-02-27
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2024-02-27
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    4.8k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    17 分
+                </div>
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="雷达学习笔记汇总"><a href="#雷达学习笔记汇总" class="headerlink" title="雷达学习笔记汇总"></a>雷达学习笔记汇总</h1><h2 id="机载雷达"><a href="#机载雷达" class="headerlink" title="机载雷达"></a>机载雷达</h2><p>机载雷达是飞机上各种雷达总称，是飞机获取信息的关键装备，主要用于侦察、监视、预警、目标指示和武器制导控制、环境探测以保障航行安全。受飞机平台约束和下视探测的要求，机载雷达集中反映了雷达新技术。</p>
+<p><a target="_blank" rel="noopener" href="https://space.bilibili.com/413042653">雷达原理B站西电刘宏伟团队</a></p>
+<p>1 机载脉冲多普勒雷达 2 雷达原理与系统 3雷达发射机接收机 4雷达接收机 5雷达接收机  6雷达接收机 7 雷达探测距离</p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1PN4y1y7aK/?spm_id_from=333.788.recommend_more_video.5&amp;vd_source=d030ba1b1655f4903bd35136c9a9539f">【了解雷达原理】P4: 脉冲多普勒雷达</a></p>
+<h2 id="雷达杂波建模方法"><a href="#雷达杂波建模方法" class="headerlink" title="雷达杂波建模方法"></a>雷达杂波建模方法</h2><h3 id="基本概念汇总"><a href="#基本概念汇总" class="headerlink" title="基本概念汇总"></a>基本概念汇总</h3><p>脉冲多普勒(PD)雷达是一种利用多普勒效应检测目标信息的全相参体制的雷达,能实现对雷达信号脉冲串频谱单根谱线滤波(频域滤波),具有对目标进行速度分辨的能力。  </p>
+<p>如果信号的采样率低于两倍奈奎斯特频率，采样数据中就会出现虚假的低频成分。 这种现象便称为混叠。采样频率如果太低就不能正确还原真实信号；但是如果采样频率太高，会有较大的频率分辨率，同时又会有产生大量的数据。通常，在实际应用中采样频率会选择比两倍奈奎斯特频率要大一些（比如3～5倍）。</p>
+<p>其实杂波是啥，杂波就是我们不感兴趣的静止目标回波。机载雷达对地看，肯定是有大量静止目标回波的，地面，建筑物等等。那地基雷达有时候也会有杂波的，比如山之类的。对于静止目标的回波，机载和地基最大的区别是雷达动不动，地基雷达不动，所以二者之间的多普勒始终是0，处理起来就很容易，<strong>相邻脉冲做减法</strong>就能去掉，其实就是只抑制零频的回波就行了。机载雷达是运动的，那个每个慢时刻二者相对多普勒频率都在变，就导致静止目标的回波不是在一个频点上，而是在一个带宽内，书上一般称为<strong>杂波多普勒带宽</strong>，那么抑制就比较麻烦了。在一个相干处理时间内，一个静止目标的回波是有一定带宽的。杂波多普勒带宽是指观测区域内，所有静止目标的带宽的并集。</p>
+<h3 id="阅读代码总结"><a href="#阅读代码总结" class="headerlink" title="阅读代码总结"></a>阅读代码总结</h3><h4 id="目标回波建立"><a href="#目标回波建立" class="headerlink" title="目标回波建立"></a>目标回波建立</h4><p>1.根据处理数据的帧数目以及每一帧（一个CPI内）脉冲的个数以及脉冲的重复频率（周期）建立慢时间轴</p>
+<p>2.计算每一个脉冲期间（以初始时刻为标准）时，雷达和目标的位置，距离以及速度在视线方向上得投影，用于计算多普勒频率</p>
+<p>3.设置快采样时间</p>
+<h3 id="网页资料合集"><a href="#网页资料合集" class="headerlink" title="网页资料合集"></a>网页资料合集</h3><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/650871767">雷达信号处理常用概率密度函数总结</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/tww960106/article/details/119333848">雷达回波模拟仿真（三）：杂波（以LFM为例）matlab</a></p>
+<p><a target="_blank" rel="noopener" href="http://radarst.cnjournals.com/html/2020/2/202002008.html">球载雷达地杂波建模与仿真分析</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/631748441">Matlab之机载雷达系统中的空时自适应处理（STAP）技术</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/tww960106/article/details/119962311?spm=1001.2014.3001.5502">空时二维自适应处理-相控阵雷达二维杂波谱分布仿真Matlab</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/matlab_dingdang/article/details/131304579">【雷达通信】基于matlab K分布雷达杂波建模与仿真</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/STAPer-sw/p/14811513.html">对机载雷达地杂波的仿真代码</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.docin.com/p-1581027617.html">机载雷达空时二维杂波特性分析 豆丁毕业论文</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.eet-china.com/mp/a140764.html">雷达杂波知识</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.docin.com/p-434097383.html">基于Matlab的机载雷达的地杂波仿真实现及抑制技术</a></p>
+<p><a target="_blank" rel="noopener" href="https://wenku.baidu.com/view/da2a2ffac2c708a1284ac850ad02de80d4d80628.html?_wkts_=1699078557118">雷达杂波</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/509263130">距离多普勒算法</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/mddh_123/article/details/107891099">距离多普勒谱（RD谱）绘制方法及理解</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/46096006?utm_id=0">雷达杂波如何建模？知乎</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/635992519">(二十四)Matlab实例之距离多普勒表面杂波功率预测</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/605255806">雷达杂波I：散射系数模型</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_60703264/article/details/129818852">关于雷达目标RCS起伏的Swerling模型附matlab代码</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.signalpro.com.cn/fileXHCL/journal/article/xhcl/HTML/2021/4/2021-4-485.html">起伏目标相干检测性能分析</a></p>
+<p><a target="_blank" rel="noopener" href="https://wenku.csdn.net/answer/edd06c74186711ee94bdfa163eeb3507">swering起伏模型matlab仿真</a></p>
+<h3 id="现代雷达电子战系统建模与仿真"><a href="#现代雷达电子战系统建模与仿真" class="headerlink" title="现代雷达电子战系统建模与仿真"></a>现代雷达电子战系统建模与仿真</h3><p><img src="https://s2.loli.net/2024/02/27/3paXrg7eunPOyJF.png"></p>
+<p><img src="https://s2.loli.net/2024/02/27/3tDnYEJqeZiUjX2.png"></p>
+<p><img src="https://s2.loli.net/2024/02/27/xyjKMdeva79O4JP.png"></p>
+<h2 id="杂波抑制"><a href="#杂波抑制" class="headerlink" title="杂波抑制"></a>杂波抑制</h2><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/629945899">DPCA</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/649559926">Space Time Adaptive Processing(STAP)/空时自适应处理的简单分析与仿真</a>  重要******</p>
+<p><a target="_blank" rel="noopener" href="https://junheng-wang.github.io/2023/08/08/STAP-Algorithm-Foundation/">空时自适应处理STAP算法梳理</a></p>
+<h3 id="和差STAP"><a href="#和差STAP" class="headerlink" title="和差STAP"></a>和差STAP</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_23176133/article/details/104153688">各种阵列分布的差方向图比较</a></p>
+<h2 id="目标检测"><a href="#目标检测" class="headerlink" title="目标检测"></a>目标检测</h2><h3 id="CFAR算法"><a href="#CFAR算法" class="headerlink" title="CFAR算法"></a>CFAR算法</h3><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/269840008">雷达系统必备知识——恒虚警检测器CFAR</a></p>
+<p><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/phased/ug/constant-false-alarm-rate-cfar-detection.html">matlab官方CFAR检测器</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/652220176">雷达信号处理之恒虚警（CFAR）检测基础知识总结</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/551779294">读书笔记 | 自动驾驶中的雷达信号处理（第5章 雷达目标检测 ）</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/512106070">干货 | 再次解读雷达信号处理中的快速二维CFAR（2D-CFAR、十字CFAR）检测算法</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/670131377">雷达目标检测之恒虚警检测（CA/SOCA/OS/GOCA-CFAR）【附MATLAB代码】</a></p>
+<p>[<a target="_blank" rel="noopener" href="https://www.cnblogs.com/Mufasa/p/10900334.html">雷达无线电系列（二）经典CFAR算法图文解析与实现（matlab）</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/Mufasa/p/11950154.html">雷达无线电系列（三）经典CFAR算法门限因子alpha计算（matlab）</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/508870274">干货 | FMCW雷达信号处理的二维CFAR（2D CFAR、十字CFAR）检测算法</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_56691527/article/details/131293377">基于瑞利分布的双参数CFAR算法</a>  **此处关于杂波块的划分甚为巧妙</p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/46306138">形态学应用——图像开运算与闭运算</a></p>
+<h3 id="积累检测"><a href="#积累检测" class="headerlink" title="积累检测"></a>积累检测</h3><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/62827974">带你入门多目标跟踪（一）领域概述</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/554249053">检测前跟踪</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.researchgate.net/publication/286345400_Track-before-detect_technique_for_dim_targets_an_overview">弱 目 标 检 测 前 跟 踪 技 术 研 究 综 述</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_40287633/category_9874517.html">（从零开始）基于检测前跟踪雷达目标跟踪技术的研究</a></p>
+<p><img src="/%E9%9B%B7%E8%BE%BE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.assets/image-20231228093647555.png" alt="image-20231228093647555"></p>
+<p>基于后验概率的值函数</p>
+<p>$\mathrm{I\left(x_{k+1},k+1\right)=\max_{x_k}\left{I\left(x_k,k\right)+\log p\left(x_{k+1}\left|x_k\right.\right)\right}+\log p\left(z_{k+1}\left|x_{k+1}\right.\right)}$</p>
+<p>$p(z_{i,j}\mid x_{k})=\frac{1}{\sqrt{2\pi}\sigma}\exp(-\frac{(z_{i,j}(k)-A)^{2}}{2\sigma^{2}})$</p>
+<p><a target="_blank" rel="noopener" href="http://www.csdata.org/p/386/">[雷达回波序列中弱小飞机目标检测跟踪数据集]</a>  楼上的数据集</p>
+<p><a target="_blank" rel="noopener" href="https://oi-wiki.org/dp/">动态规划</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1AB4y1w7eT/?spm_id_from=333.337.search-card.all.click">10分钟彻底搞懂“动态规划”算法</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1yL411L7sX/?spm_id_from=333.337.search-card.all.click">【动态规划】这可能是最好懂的动态规划入门教程?!</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_40287633/article/details/105460314">看完这篇文章，你一定能看懂viterbi 算法！</a></p>
+<p><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E7%BB%B4%E7%89%B9%E6%AF%94%E7%AE%97%E6%B3%95">维特比算法</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/345081299">隐马尔可夫模型(HMM)Matlab演示代码</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/ouok000/article/details/125999213">滤波笔记二：运动模型（CV&amp;CA&amp;CTRV）</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_44044161/category_10931736.html">机动目标跟踪</a></p>
+<p>基于动态规划的弱目标检测前跟踪算法</p>
+<p>检测前跟踪就是用多帧数据积累某些东西的方式来提高回波的信噪比。例如用标准霍夫变换来积累能量——SHT-TBD，用动态滤波来积累最优值——DP-TBD</p>
+<ul>
+<li>传统的检测跟踪是跟踪前检测（detect-before-trace，DBT）</li>
+</ul>
+<p>对于DBT，它是直接采用低门限或者无门限处理的的传感器的原始观测数据，然后进行数据信息的挖掘，通过在时间上的观测积累，提高信噪比，以此达到对于目标的跟踪，在高的信噪比下DBT的检测效果较好。但是对于信噪比较低的目标，若要仍使用DBT进行检测跟踪，则需要降低门限或者提高传感器的灵敏度，但是会提高虚警率以及无效的回波信号。因此，在低信噪比下，DBT达到的效果并不是很好。对于加强信号处理提高信噪比以满足DBT门限处理的要求，可以对于信号进行长时间的相参积累来实现。因为在长时间的相参积累中，可以增加实际利用的目标回波信号能量，能够有效地提高雷达检测性能。目前，传统的相参积累都是通过FFT进行的。但是这是建立在一个大的前提条件上的，即在波束驻留期间，目标的移动要近似匀速直线运动，多普勒频率为常数，切回波包络的移动不超过一个距离门。在长时间进行观察时，上述条件将不会成立。对于FFT也不能将全部的回波能量完全积累。同时，对于相参积累，整个系统的造价也较高。因此，我们要进行探索更加有效的相参积累或非相参积累方法。</p>
+<ul>
+<li>检测前目标跟踪（TBD）</li>
+</ul>
+<p>检测前跟踪（trace-before-detect,TBD)是针对于弱目标的检测跟踪提出的。</p>
+<p>对于弱目标的检测跟踪，TBD作为一个典型的强非线性问题，可以进行非相参积累，能够达到较好的效果。</p>
+<ul>
+<li>对于TBD，其有以下的优点：对于原始的传感器数据进行直接的处理，处理得到的信息并随着时间的积累而进行，对于目标的决策位于整个处理链的最后一步。</li>
+</ul>
+<h4 id="粒子滤波"><a href="#粒子滤波" class="headerlink" title="粒子滤波"></a>粒子滤波</h4><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_44044161/article/details/125445579">一篇博客彻底掌握：粒子滤波 particle filter (PF) 的理论及实践</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_44044161/category_11056621.html">非线性滤波-目标跟踪应用</a></p>
+<p>核心思想：是使用一组具有<strong>相应权值的随机样本</strong>(粒子)来表示状态的后验分布。该方法的基本思路是选取一个<strong>重要性概率密度</strong>并从中进行<strong>随机抽样</strong>，得到一些带有相应权值的随机样本后，在<strong>状态观测的基础上调节权值的大小</strong>、和粒子的位置，再使用这些样本来逼近状态后验分布，最后将这组样本的<strong>加权求和</strong>作为状态的估计值。</p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/161617286">无公式解释粒子滤波（通俗易懂）</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/u011624019/article/details/80559397">粒子滤波重采样的理解及MATLAB实现</a></p>
+<h2 id="分布式"><a href="#分布式" class="headerlink" title="分布式"></a>分布式</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/BoilingHotPot/article/details/134935510">分布式滤波、多源信息融合与多目标跟踪技术及其Matlab代码</a></p>
+<h2 id="Matlab技巧汇总"><a href="#Matlab技巧汇总" class="headerlink" title="Matlab技巧汇总"></a>Matlab技巧汇总</h2><h3 id="基本运算"><a href="#基本运算" class="headerlink" title="基本运算"></a>基本运算</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/wenhao_ir/article/details/125219413">归纳总结MATLAB中与矩阵运算有关的算术运算符(加、减、乘、除、点乘、点除、乘方、转置等)</a></p>
+<p><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/cell.html">cell元胞数组</a></p>
+<ul>
+<li>特征值和特征向量的计算</li>
+</ul>
+<pre class=" language-matlab"><code class="language-matlab"><span class="token punctuation">[</span>V<span class="token punctuation">,</span>D<span class="token punctuation">]</span><span class="token operator">=</span><span class="token function">eig</span><span class="token punctuation">(</span>A<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/ComputingCenter/article/details/80841295">matlab求逆运算左除（\）和右除（/），inv，pinv的用法及区别</a></p>
+<ul>
+<li>多变量赋值方法，用于解决传递参数过多问题。使用元组传递。</li>
+</ul>
+<pre class=" language-matlab"><code class="language-matlab">x<span class="token operator">=</span><span class="token punctuation">{</span><span class="token number">10</span> <span class="token number">20</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">[</span>a<span class="token punctuation">,</span>b<span class="token punctuation">]</span><span class="token operator">=</span>x<span class="token punctuation">{</span><span class="token operator">:</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">%a=10,b=20</span>
+</code></pre>
+<ul>
+<li>sin的计算</li>
+</ul>
+<pre class=" language-matlab"><code class="language-matlab"><span class="token function">sind</span><span class="token punctuation">(</span><span class="token number">180</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">%0</span>
+<span class="token function">sin</span><span class="token punctuation">(</span><span class="token keyword">pi</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">%1.2246e-16</span>
+</code></pre>
+<p><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/struct.html">结构体</a></p>
+<p><img src="https://s2.loli.net/2024/02/27/eV4oTLWRp1ZaSnD.png"></p>
+<p><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/permute.html">permute</a>—置换数组维度</p>
+<ul>
+<li>删除数组中某些指定的数</li>
+</ul>
+<pre class=" language-matlab"><code class="language-matlab"><span class="token function">protect</span><span class="token punctuation">(</span>protect<span class="token operator">&lt;</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token function">protect</span><span class="token punctuation">(</span>protect<span class="token operator">></span><span class="token function">numfast</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span> 
+</code></pre>
+<pre class=" language-matlab"><code class="language-matlab">R_search_Index<span class="token operator">=</span><span class="token punctuation">(</span>IndexR<span class="token operator">-</span>R_Span_Index<span class="token punctuation">)</span><span class="token operator">:</span><span class="token punctuation">(</span>IndexR<span class="token operator">+</span>R_Span_Index<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">R_search_Index</span><span class="token punctuation">(</span>R_search_Index<span class="token operator">&lt;</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token function">R_search_Index</span><span class="token punctuation">(</span>R_search_Index<span class="token operator">></span><span class="token function">numfast</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+D_search_Index<span class="token operator">=</span><span class="token punctuation">(</span>IndexD<span class="token operator">-</span>D_Span_Index<span class="token punctuation">)</span><span class="token operator">:</span><span class="token punctuation">(</span>IndexD<span class="token operator">+</span>D_Span_Index<span class="token punctuation">)</span><span class="token punctuation">;</span>
+id_small<span class="token operator">=</span><span class="token function">find</span><span class="token punctuation">(</span>D_search_Index<span class="token operator">&lt;</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token function">D_search_Index</span><span class="token punctuation">(</span>id_small<span class="token punctuation">)</span><span class="token operator">=</span><span class="token function">D_search_Index</span><span class="token punctuation">(</span>id_small<span class="token punctuation">)</span><span class="token operator">+</span><span class="token function">doppler_num</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token punctuation">;</span>
+id_big<span class="token operator">=</span><span class="token function">find</span><span class="token punctuation">(</span>D_search_Index<span class="token operator">></span><span class="token function">doppler_num</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">D_search_Index</span><span class="token punctuation">(</span>id_big<span class="token punctuation">)</span><span class="token operator">=</span><span class="token function">D_search_Index</span><span class="token punctuation">(</span>id_big<span class="token punctuation">)</span><span class="token operator">-</span><span class="token function">doppler_num</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><a target="_blank" rel="noopener" href="https://jingyan.baidu.com/article/7f766dafeb5e234101e1d0d6.html">matlab怎么删除数组中满足一定条件的元素</a></p>
+<ul>
+<li><code>setdiff</code>：设置两个数组的差集</li>
+</ul>
+<p><code>C = setdiff(A,B)</code> 返回 <code>A</code> 中存在但 <code>B</code> 中不存在的数据，不包含重复项。<code>C</code> 是有序的。</p>
+<p>如果 <code>A</code> 和 <code>B</code> 为表或时间表，则 <code>setdiff</code> 返回 <code>A</code> 中存在但 <code>B</code> 中不存在的行。对于时间表，<code>setdiff</code> 在确定相等性时会考虑行时间，并按行时间对输出时间表 <code>C</code> 进行排序。</p>
+<ul>
+<li>图像标题引用变量</li>
+</ul>
+<pre class=" language-matlab"><code class="language-matlab"><span class="token function">title</span><span class="token punctuation">(</span><span class="token function">sprintf</span><span class="token punctuation">(</span>"<span class="token comment" spellcheck="true">%d次拟合曲线", i))</span>
+<span class="token function">title</span> <span class="token punctuation">(</span> <span class="token punctuation">[</span><span class="token string">'运行时间: '</span><span class="token punctuation">,</span><span class="token function">num2str</span><span class="token punctuation">(</span><span class="token number">i</span><span class="token punctuation">)</span> <span class="token punctuation">]</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<ul>
+<li>输出临时运行阶段</li>
+</ul>
+<pre class=" language-matlab"><code class="language-matlab"><span class="token function">disp</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'Clutter Radar : '</span><span class="token punctuation">,</span><span class="token function">num2str</span><span class="token punctuation">(</span><span class="token number">j</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token string">'  Frame : '</span><span class="token punctuation">,</span><span class="token function">num2str</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<ul>
+<li>概率密度函数求解</li>
+</ul>
+<p><img src="/%E9%9B%B7%E8%BE%BE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.assets/image-20240128131328302.png" alt="image-20240128131328302"></p>
+<h3 id="傅里叶变换那些事"><a href="#傅里叶变换那些事" class="headerlink" title="傅里叶变换那些事"></a>傅里叶变换那些事</h3><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/443376634?utm_id=0">数字信号处理1：完全掌握Matlab中的FFT</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/586932441?utm_id=0">数字信号处理1：完全掌握Matlab中的FFT（补充）</a></p>
+<ul>
+<li>matlab中的fftshift和ifftshift 函数的区别与使用</li>
+</ul>
+<p>首先，ifftshift和fftshift执行的都是圆周位移的操作。fftshift是将数组或矩阵按正方向（向右和向下）做圆周位移，而ifftshift是按负方向（向左和向上）做圆周位移。圆周位移的步长等于数组或矩阵长度的一半，对于偶数是N/2，对于奇数是（N-1）/2。这也就是为什么对于偶数长的数组，fftshift和ifftshift的结果相同，而对于奇数长的数组，两者结果却不一样的原因。</p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/zxhyxiao/p/12359243.html">关于MATLAB中fft，fftshift，fftshift(fft(fftshift(x)))，FFT要乘以dx 等问题理解</a>  重要！！！重要！！！</p>
+<p><a target="_blank" rel="noopener" href="https://www.docin.com/p-1565539244.html">Why_use_fftshift(fft(fftshift(x)))__in_Matlab</a></p>
+<p><img src="https://s2.loli.net/2024/02/27/EQZY4SR7tfxg1bU.png"></p>
+<blockquote>
+<p>注意：偶数的频率范围$(-N/2:N/2-1)\times \Delta f$</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/151226805">傅里叶变换的物理意义</a></p>
+<h3 id="绘图"><a href="#绘图" class="headerlink" title="绘图"></a>绘图</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35789421/article/details/115368734">学习matlab（九）——绘图（三维）</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/145124840">【MATLAB图像】— 图形细节处理操作</a></p>
+<pre class=" language-matlab"><code class="language-matlab"><span class="token function">figure</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">colormap</span><span class="token punctuation">(</span>jet<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">surf</span><span class="token punctuation">(</span>fd_n<span class="token punctuation">,</span>fs_n<span class="token punctuation">,</span>P<span class="token punctuation">)</span><span class="token punctuation">;</span>
+shading interp<span class="token punctuation">;</span>lighting gouraud<span class="token punctuation">;</span>colorbar<span class="token punctuation">;</span>
+<span class="token function">title</span><span class="token punctuation">(</span><span class="token string">'杂波功率谱'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">xlabel</span><span class="token punctuation">(</span><span class="token string">'fd'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">ylabel</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">zlabel</span><span class="token punctuation">(</span><span class="token string">'P/dB'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>hold on<span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">%绘制杂波功率谱图</span>
+</code></pre>
+<h2 id="雷达知识汇总"><a href="#雷达知识汇总" class="headerlink" title="雷达知识汇总"></a>雷达知识汇总</h2><h3 id="总体资料"><a href="#总体资料" class="headerlink" title="总体资料"></a>总体资料</h3><p><a target="_blank" rel="noopener" href="https://www.zhihu.com/column/c_1625875262599553024">MIT雷达系统公开课</a></p>
+<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzI5MzEwNTI4NQ==&amp;mid=2655805324&amp;idx=1&amp;sn=31382b40e839a19e696dfbc743fa548f&amp;chksm=f7cfc466c0b84d7094d634dc5d8629f0c0296c5228b867795647fd25aae64c3f4d819e309276&amp;token=298412928&amp;lang=zh_CN#rd">专家讲座 | 机载雷达目标探测技术（视频）</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/tww960106/category_11230027.html?spm=1001.2014.3001.5482">雷达信号处理-CSDN-一些仿真结果展示</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.zhihu.com/column/c_1622649854261493760">雷达笔记-知乎</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.zhihu.com/column/c_1519640894113869825">雷达课堂-调频连续波-知乎</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.zhihu.com/column/c_1495117991213330433">信号处理与数学-调频连续波-知乎</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/a1367666195/category_9980037.html">SAR</a></p>
+<p>关于雷达算法，我个人认为可以分为两个部分，第一个部分是CFAR检测算法以及CFAR检测算法之前的部分，称为雷达信号处理算法，包括距离估计（测距）、速度估计（测速）、角度估计（测角）、CFAR检测等目标检测算法，以及波束形成、旁瓣抑制、相干积累（相参积累）与非相干积累、幅相校正、多普勒相位补偿、数字波束形成（DBF）、杂波抑制、脉冲压缩、动目标显示（MTI）、动目标检测（MTD）、合成孔径成像算法例举未全）等等。（此部分比较重视数学基础、信号理论与处理算法，是学习雷达信号处理的关键部分。</p>
+<p>第二个部分是CFAR检测算法之后的部分，称为雷达数据处理算法，包括聚类算法、跟踪算法、航迹关联算法，以及雷达数据结合人工智能（AI）等算法（例举未全）。此部分偏重于数据处理和信息处理算法，对于雷达上报的点云数据（散点）需要采用各种不同的算法来实现所需要达到的指标，个人认为更看重数学理论、计算机算法以及数据处理能力</p>
+<h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/376875518">雷达视距公式如何推导的?</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/384375741">雷达信号处理过程中的射频，中频，视频，基带</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/616973836?utm_id=0">雷达笔记 - 4 匹配滤波/脉冲压缩 - 知乎</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/kinologic/p/14105907.html">【雷达原理】脉冲压缩-匹配滤波</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/567656893?utm_id=0">雷达入门课系列文章（1）| 基于MATLAB的雷达信号处理实验教程</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/355456608">相参脉冲积累是如何积累到一起的?</a> 重要※</p>
+<p><a target="_blank" rel="noopener" href="https://antenna-theory.com/cn/basics/main.php">天线基础</a></p>
+<h3 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h3><p><a target="_blank" rel="noopener" href="https://radars.ac.cn/article/doi/10.12000/JR20039?viewType=HTML">存在站址误差下的时频差稳健定位算法</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_43485394/article/details/123493360">脉冲多普勒PD及其MATLAB实现_脉冲压缩,采用pd处理方法进行测速</a></p>
+<h2 id="相关专业知识汇总"><a href="#相关专业知识汇总" class="headerlink" title="相关专业知识汇总"></a>相关专业知识汇总</h2><h3 id="信号类"><a href="#信号类" class="headerlink" title="信号类"></a>信号类</h3><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/477637992">数字信号处理 常见概念问题总结与回答</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.zhihu.com/column/c_1301456161237876736">信号与系统漫谈</a></p>
+<p><a target="_blank" rel="noopener" href="https://jcf94.com/2015/07/01/2015-07-01-xinhaoxiangguan/">信号相关专业复习</a></p>
+<p><a target="_blank" rel="noopener" href="https://jcf94.com/2015/10/26/2015-10-26-suiji/">随机信号 复习笔记</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/h568630659/article/details/117664232">《通信原理》复习笔记3—-第三章随机过程（重点与难点）</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/74736706">采样定理，频谱混叠和傅里叶变换 深入理解</a></p>
+<h4 id="各种比"><a href="#各种比" class="headerlink" title="各种比"></a>各种比</h4><ul>
+<li>信噪比$\mathrm{SNR}=10\mathrm{lg(P_S/P_N)}$</li>
+</ul>
+<p>SNR：信噪比，单位是dB;PS：信号的有效功率;PN：噪声的有效功率。</p>
+<ul>
+<li>信干噪比SINR（Signal to Interference plus Noise Ratio）$\mathrm{SINR}=10\mathrm{lg}[\mathrm{P}_\mathrm{S}/(\mathrm{P}_\mathrm{I}+\mathrm{P}_\mathrm{N})]$</li>
+</ul>
+<p>SINR：信干噪比，单位是dB;PS：信号的有效功率;PI：干扰信号的有效功率;PN：噪声的有效功率。</p>
+<blockquote>
+<p>注意，求解平均功率时可以是复数绝对值的平方！！！</p>
+</blockquote>
+<h3 id="数学类"><a href="#数学类" class="headerlink" title="数学类"></a>数学类</h3><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1ys411472E/?spm_id_from=333.999.0.0">官方双语/合集线性代数的本质 - 系列合集</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/MLNLP-World/MIT-Linear-Algebra-Notes/tree/master">《麻省理工公开课：线性代数》中文笔记</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/514053520">向量和矩阵中的各种乘积总结</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_44853197/article/details/118408668">先验概率、后验概率和似然估计的讲解</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/414694649">先验概率、后验概率、贝叶斯公式、 似然函数</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/621520926">矩阵论-期末复习</a></p>
+<h4 id="arg"><a href="#arg" class="headerlink" title="arg"></a>arg</h4><p>arg    是变元（即自变量argument）的英文缩写。<br>arg min 就是使后面这个式子达到最小值时的变量的取值<br>arg max 就是使后面这个式子达到最大值时的变量的取值</p>
+<p>例如 函数F(x,y):</p>
+<p>arg  min F(x,y)就是指当F(x,y)取得最小值时，变量x,y的取值</p>
+<p>arg  max F(x,y)就是指当F(x,y)取得最大值时，变量x,y的取值</p>
+<h4 id="db的计算"><a href="#db的计算" class="headerlink" title="db的计算"></a>db的计算</h4><p>功率在dB运算的时候用10，电流电压用20。</p>
+<h2 id="工具类"><a href="#工具类" class="headerlink" title="工具类"></a>工具类</h2><h3 id="工具网站"><a href="#工具网站" class="headerlink" title="工具网站"></a>工具网站</h3><p><a target="_blank" rel="noopener" href="https://www.connectedpapers.com/">Connected Papers</a></p>
+<p><a target="_blank" rel="noopener" href="https://tool.yovisun.com/scihub/">SCI-Hub论文下载可用网址链接 - 实时更新</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.x-mol.com/">X-MOL科学知识平台-文献直达和导师库</a></p>
+<p><a target="_blank" rel="noopener" href="https://app.grammarly.com/ddocs/2255762279">grammarly-实现实时语法错误查找，还提供详细的解释和修改意见。</a></p>
+<p><a target="_blank" rel="noopener" href="https://virtualwritingtutor.com/">Virtual Writing Tutor-计算单词，检查拼写，检查语法和标点符号，检查释义，改进单词选择，自我评估目标结构的使用</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.cqvip.com/">维普查重</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/402589277/answer/3196530555">有哪些好用的zotero插件?</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/636789620">跟顶刊学图片配色，1分钟完成一套审稿人最爱的配色方案！</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/654179534">白嫖这12个插件，让你的Zotero成为地表最强文献管理器！</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_55746113/article/details/122825490">Zotero常见问题</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1o3411Q7JQ/?spm_id_from=333.337.search-card.all.click">Zotero零基础保姆级教程</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/479883361">zotero有哪些实用的高级技巧？</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/619185013">TeraCloud更名了，支持Webdav，永久 25 GB获取方法</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/598375459">zotero-坚果云同步（ipad同步失败）</a></p>
+<p><a target="_blank" rel="noopener" href="https://plugins.zotero-chinese.com/#/?id=zotero-%E6%8F%92%E4%BB%B6%E4%B8%8B%E8%BD%BD">Zotero 插件下载</a></p>
+<p><a target="_blank" rel="noopener" href="https://gitee.com/shifeng2020/obsidian-plugin/blob/master/%E6%8F%92%E4%BB%B6.md">obsidain插件</a></p>
+<p><a target="_blank" rel="noopener" href="https://obsidian.md/plugins">obsidian官方插件</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/620610844">Obsidian常用插件推荐以及下载链接，简单使用</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/yangstar/articles/17060727.html">解决typora和obsidian图片路径不一致问题</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/qnscholar/zotero-if-pro-max/sawsp7">zotero one新手指南</a></p>
+<p><a target="_blank" rel="noopener" href="https://caj2pdf.cn/">caj2pdf</a></p>
+<p><a target="_blank" rel="noopener" href="https://editor.citationstyles.org/about/">参考文献样式搜索和编辑的网站</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/663211485">参考文献样式编辑教程</a></p>
+<p><a target="_blank" rel="noopener" href="https://pkmer.cn/products/zotero/zoteroMarket/">Zotero 插件集市</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/note286/xdupgtp/">研究生学位论文开题报告表XeLaTeX模板</a></p>
+<h4 id="latex"><a href="#latex" class="headerlink" title="latex"></a>latex</h4><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/607691773">雷达LATEX公式应用基础</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.latexlive.com/##">在线Latex公式编辑器</a></p>
+<p><a target="_blank" rel="noopener" href="https://simpletex.cn/ai/latex_ocr">公式识别</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.overleaf.com/project">overleaf</a></p>
+<p><a target="_blank" rel="noopener" href="https://latex.91maths.com/">公式编辑器</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.tablesgenerator.com/">TableGenerator</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41554005/article/details/120712126">VSCODE 安装LATEX环境，参数配置，常见问题解决</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/166523064">Visual Studio Code (vscode)配置LaTeX</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/dolbydu/font/tree/master/unicode">font下载</a></p>
+<p><a target="_blank" rel="noopener" href="https://fontsgeek.com/">字体下载</a></p>
+<p>pdf转word使用pandoc</p>
+<p><a target="_blank" rel="noopener" href="https://etaoinwu.com/blog/how-to-input-math-formula-to-word-the-right-way/">如何正确地使用 MS Word 公式输入</a></p>
+<h3 id="英语学习"><a href="#英语学习" class="headerlink" title="英语学习"></a>英语学习</h3><p><a target="_blank" rel="noopener" href="https://github.com/byoungd/English-level-up-tips/tree/master?tab=readme-ov-file">英语学习指南</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/yujiangshui/A-Programmers-Guide-to-English">专为程序员编写的英语学习指南</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/hehonghui/awesome-english-ebooks">经济学人、纽约客等英语外刊杂志下载</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/hzpt-inet-club/english-note?tab=readme-ov-file">英语语法笔记</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/RealKai42/qwerty-learner">单词记忆与英语肌肉记忆锻炼软件</a></p>
+<p><a target="_blank" rel="noopener" href="https://csdiy.wiki/">CS自学指南</a></p>
+<h3 id="PPT制作要求"><a href="#PPT制作要求" class="headerlink" title="PPT制作要求"></a>PPT制作要求</h3><ul>
+<li>算法原理介绍+仿真结果验证 的格式。</li>
+<li>原理介绍不用放太多公式，把<strong>基本原理，关键公式</strong>结合<strong>自己的理解</strong>讲清楚。仿真结果部分要先讲仿真<strong>背景，参数</strong>，再放结果，最后是对结果的分析</li>
+</ul>
+<h3 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h3><p>reason 原因 灰色</p>
+<p>conclusion 结论  黄色</p>
+<p>advantage 优点 灰色</p>
+<p>disadvantage 缺点  灰色</p>
+<p>theory 理论 黄色</p>
+<p>专有名词和公式 蓝色</p>
+<p>hypothesis 假设</p>
+<p>橙色：专业不完整的术语</p>
+<h2 id="专业英文缩写"><a href="#专业英文缩写" class="headerlink" title="专业英文缩写"></a>专业英文缩写</h2><p>$P_D$:检测概率 ：已知噪声加信号的PDF以及检测门限，求积分</p>
+<p>$P_{Fa}$:虚警概率：已知噪声PDF以及检测门限，求积分</p>
+<p><code>SIR</code>:信干比 <code>SNR</code>：信噪比    <code>SCR</code> ：信杂比</p>
+<p><code>SAR</code>:合成孔径雷达</p>
+<p><code>PRI</code>:脉冲重复间隔 同<code>IPP</code>:脉冲内间隔    <code>CPI</code>:相干处理时间</p>
+<p><code>PRF</code>:脉冲重复频率</p>
+<p><code>STALO</code>:稳定本振</p>
+<p><code>STAP</code>：空时自适应处理技术</p>
+<p><code>CFAR</code>：恒虚警概率检测</p>
+<p><code>ECM</code>:电子对抗</p>
+<p><code>EA</code>:电子攻击</p>
+<p>duty cycle :占空比</p>
+<p><code>numRows,numCols</code> 行数和列数</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Wgm</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://example.com/2024/02/27/%E9%9B%B7%E8%BE%BE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">http://example.com/2024/02/27/%E9%9B%B7%E8%BE%BE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Wgm</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E9%9B%B7%E8%BE%BE/">
+                                    <span class="chip bg-color">雷达</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2024/02/27/%E9%9B%B7%E8%BE%BE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="雷达学习笔记">
+                        
+                        <span class="card-title">雷达学习笔记</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            雷达学子资料汇总
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-02-27
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    学习笔记
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E9%9B%B7%E8%BE%BE/">
+                        <span class="chip bg-color">雷达</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2024/02/27/Latex%E6%A8%A1%E6%9D%BF%E6%B1%87%E6%80%BB/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Latex模板汇总">
+                        
+                        <span class="card-title">Latex模板汇总</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            latex模板汇总
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-02-27
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    学习笔记
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/latex/">
+                        <span class="chip bg-color">latex</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+<!-- 代码语言 -->
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+<!-- 代码块复制 -->
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/clipboard.min.js"></script>
+<!-- 代码块收缩 -->
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script> 
+<!-- 代码块折行 -->
+<style type="text/css">code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }</style>
+
+
+    <footer class="page-footer bg-color">
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2022-2024</span>
+            
+            <a href="/about" target="_blank">Wgm</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">25k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/wgmzyx" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:2565920244@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2565920244" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2565920244" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="99"
+        src="/libs/background/canvas-nest.js"></script>
+    
+
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+
+</html>
