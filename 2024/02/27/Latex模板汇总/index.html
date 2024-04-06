@@ -266,21 +266,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-02-27
+                    2024-04-06
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.8k
+                    4.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    17 分
+                    19 分
                 </div>
                 
 
@@ -312,7 +312,23 @@
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_41957433/article/details/120463484">LaTeX中三种列举的形式：itemize，enumerate，description</a></p>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/u012428169/article/details/105137920">Latex使用newcommand实现文中图片公式及section引用格式设置</a></p>
 <p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/261667944">LaTeX listings 宏包使用说明</a></p>
-<h3 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h3><p>罗马字体（Roman font）：用于表示正文文本。 LaTeX命令：<code>\textrm{文本}</code> 或者 <code>\textnormal{文本}</code></p>
+<ul>
+<li>代码和pdf快速索引</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/cz2011301070/article/details/105461416">VScode+Latex：代码和pdf互相跳转</a></p>
+<p>在pdf中任意位置<code>Ctrl+</code>，跳转到代码相应位置</p>
+<p>代码跳转到pdf，<code>Alt </code>+<code>J</code></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_36667170/article/details/124793769">学术党必备：Zotero一键导出BibTex 参考文献</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhidao.baidu.com/question/361598617620243012.html">latex 参考文献作者是三个以上时如何处理？</a></p>
+<h2 id="细节整理"><a href="#细节整理" class="headerlink" title="细节整理"></a>细节整理</h2><ul>
+<li><p>空格和分段和换行：<strong>空格</strong>是连续的若干个空白字符，一行开头的空格忽略不计，行末的换行符视为一个空格；<strong>空行</strong>，会将文字分段。多个空行被<br>视为一个空行，在行末使用 <code>\par</code> 命令分段；<code>\\</code> 被直接定义成了<strong>手动换行</strong>的命令,不会导致缩进</p>
+</li>
+<li><p>注释： % 字符</p>
+</li>
+<li><p>$   $行内公式  $$  $$ 行间公式</p>
+</li>
+</ul>
+<h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><p>罗马字体（Roman font）：用于表示正文文本。 LaTeX命令：<code>\textrm{文本}</code> 或者 <code>\textnormal{文本}</code></p>
 <p>打印字体（Typewriter font）：通常用于表示计算机代码、命令或程序。 LaTeX命令：<code>\texttt{文本}</code></p>
 <p>等宽字体（Monospaced font）：类似打印字体，但更常用于显示等宽对齐的文本。 LaTeX命令：<code>\textsf{文本}</code></p>
 <p>粗体字体（Bold font）：用于强调关键词或重要内容。 LaTeX命令：<code>\textbf{文本}</code></p>
@@ -325,7 +341,7 @@
 
 <span class="token comment" spellcheck="true">%\documentclass{cumcmthesis}导言区</span>
 <span class="token function selector">\documentclass</span><span class="token punctuation">[</span>withoutpreface,bwprint<span class="token punctuation">]</span><span class="token punctuation">{</span><span class="token keyword">cumcmthesis</span><span class="token punctuation">}</span> <span class="token comment" spellcheck="true">%去掉封面与编号页，用于指定文档类</span>
-<span class="token function selector">\usepackage</span><span class="token punctuation">{</span><span class="token keyword">subfigure</span><span class="token punctuation">}</span>	<span class="token comment" spellcheck="true">%用于排版多张图片,调用宏包</span>
+<span class="token function selector">\usepackage</span><span class="token punctuation">{</span><span class="token keyword">subfigure</span><span class="token punctuation">}</span>	<span class="token comment" spellcheck="true">%用于排版多张图片,调用宏包  </span>
 <span class="token function selector">\usepackage</span><span class="token punctuation">{</span><span class="token keyword">float</span><span class="token punctuation">}</span>	<span class="token comment" spellcheck="true">%用于排版图片位置</span>
 <span class="token function selector">\usepackage</span><span class="token punctuation">{</span><span class="token keyword">mathdots</span><span class="token punctuation">}</span> <span class="token comment" spellcheck="true">%可用用从右上到左下的省略号，矩阵的时候用\iddots </span>
 <span class="token function selector">\bibliographystyle</span><span class="token punctuation">{</span>plain<span class="token punctuation">}</span>	<span class="token comment" spellcheck="true">%引用样式,参考文献</span>
@@ -357,7 +373,10 @@
 
 <span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">document</span><span class="token punctuation">}</span> 
 </code></pre>
-<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><h3 id="普通表格"><a href="#普通表格" class="headerlink" title="普通表格"></a>普通表格</h3><p><img src="https://s2.loli.net/2024/02/27/Vi9rOkdQIWUXmZj.png"></p>
+<blockquote>
+<p>注意，在排版多张图片时库<code>subfigure</code>会和库<code>figure</code>的某些函数冲突，毕设模板中已经导入<code>figure</code>，因此不可用前者</p>
+</blockquote>
+<h3 id="普通表格"><a href="#普通表格" class="headerlink" title="普通表格"></a>普通表格</h3><p><img src="https://s2.loli.net/2024/02/27/Vi9rOkdQIWUXmZj.png"></p>
 <pre class=" language-latex"><code class="language-latex"><span class="token comment" spellcheck="true">%表格的制作以及排版</span>
  <span class="token comment" spellcheck="true">%l：左对齐 c：居中对齐 r：右对齐(均指的是表格内文字) </span>
  <span class="token comment" spellcheck="true">%|表示竖直的表格线，\hline表示水平的表格线 %p{1.5cm}用于设置指定宽度的列，内容超过后自动换行 </span>
@@ -402,6 +421,8 @@
     <span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">tabular</span><span class="token punctuation">}</span>
 <span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">table</span><span class="token punctuation">}</span>
 </code></pre>
+<pre class=" language-latex"><code class="language-latex"><span class="token function selector">\usepackage</span><span class="token punctuation">{</span><span class="token keyword">booktabs</span><span class="token punctuation">}</span><span class="token comment" spellcheck="true">%提供命令\toprule、\midrule、\bottomrule</span>
+</code></pre>
 <h3 id="三线表—随意长度"><a href="#三线表—随意长度" class="headerlink" title="三线表—随意长度"></a>三线表—随意长度</h3><p><img src="https://s2.loli.net/2024/02/27/7Fjir3HgcJkRxd5.png"></p>
 <pre class=" language-latex"><code class="language-latex"><span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">table</span><span class="token punctuation">}</span><span class="token punctuation">[</span>H<span class="token punctuation">]</span>
     <span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">center</span><span class="token punctuation">}</span>
@@ -414,6 +435,9 @@
     <span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">center</span><span class="token punctuation">}</span>
 <span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">table</span><span class="token punctuation">}</span>
 </code></pre>
+<blockquote>
+<p><code>\usepackage{array}</code></p>
+</blockquote>
 <h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><pre class=" language-latex"><code class="language-latex"><span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">enumerate</span><span class="token punctuation">}</span>
     <span class="token function selector">\item</span> 假设同一时刻的多条数据基本相近，只存在少数不同。
     <span class="token function selector">\item</span> 假设题目中所给数据均为真实数据。
@@ -762,7 +786,34 @@ $$
     <span class="token function selector">\label</span><span class="token punctuation">{</span><span class="token keyword">lstm net</span><span class="token punctuation">}</span> <span class="token comment" spellcheck="true">%用于引用   \ref{lstm net}</span>
 <span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">figure</span><span class="token punctuation">}</span>
 </code></pre>
-<h3 id="多张图片"><a href="#多张图片" class="headerlink" title="多张图片"></a>多张图片</h3><pre class=" language-latex"><code class="language-latex"><span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">figure</span><span class="token punctuation">}</span><span class="token punctuation">[</span>H<span class="token punctuation">]</span>
+<h3 id="多张图片"><a href="#多张图片" class="headerlink" title="多张图片"></a>多张图片</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/binbinczsohu/article/details/109900248">关于Latex并排多张图片及加入图片说明的方法</a>   不使用<code>subfigure</code></p>
+<pre class=" language-latex"><code class="language-latex"><span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">figure</span><span class="token punctuation">}</span><span class="token punctuation">[</span>h<span class="token punctuation">]</span>
+    
+    <span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">minipage</span><span class="token punctuation">}</span><span class="token punctuation">{</span>0.32<span class="token function selector">\linewidth</span><span class="token punctuation">}</span>
+        <span class="token function selector">\vspace</span><span class="token punctuation">{</span>3pt<span class="token punctuation">}</span>
+        <span class="token comment" spellcheck="true">%这个图片路径替换成你的图片路径即可使用</span>
+        <span class="token function selector">\centerline</span><span class="token punctuation">{</span><span class="token function selector">\includegraphics</span><span class="token punctuation">[</span>width=<span class="token function selector">\textwidth</span><span class="token punctuation">]</span><span class="token punctuation">{</span>1.png<span class="token punctuation">}</span><span class="token punctuation">}</span>
+          <span class="token comment" spellcheck="true">% 加入对这列的图片说明</span>
+        <span class="token function selector">\centerline</span><span class="token punctuation">{</span>Image<span class="token punctuation">}</span>
+    <span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">minipage</span><span class="token punctuation">}</span>
+    <span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">minipage</span><span class="token punctuation">}</span><span class="token punctuation">{</span>0.32<span class="token function selector">\linewidth</span><span class="token punctuation">}</span>
+        <span class="token function selector">\vspace</span><span class="token punctuation">{</span>3pt<span class="token punctuation">}</span>
+        <span class="token function selector">\centerline</span><span class="token punctuation">{</span><span class="token function selector">\includegraphics</span><span class="token punctuation">[</span>width=<span class="token function selector">\textwidth</span><span class="token punctuation">]</span><span class="token punctuation">{</span>2.png<span class="token punctuation">}</span><span class="token punctuation">}</span>
+     
+        <span class="token function selector">\centerline</span><span class="token punctuation">{</span>Image<span class="token punctuation">}</span>
+    <span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">minipage</span><span class="token punctuation">}</span>
+    <span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">minipage</span><span class="token punctuation">}</span><span class="token punctuation">{</span>0.32<span class="token function selector">\linewidth</span><span class="token punctuation">}</span>
+        <span class="token function selector">\vspace</span><span class="token punctuation">{</span>3pt<span class="token punctuation">}</span>
+        <span class="token function selector">\centerline</span><span class="token punctuation">{</span><span class="token function selector">\includegraphics</span><span class="token punctuation">[</span>width=<span class="token function selector">\textwidth</span><span class="token punctuation">]</span><span class="token punctuation">{</span>3.png<span class="token punctuation">}</span><span class="token punctuation">}</span>
+     
+        <span class="token function selector">\centerline</span><span class="token punctuation">{</span>Image<span class="token punctuation">}</span>
+    <span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">minipage</span><span class="token punctuation">}</span>
+ 
+    <span class="token function selector">\caption</span><span class="token punctuation">{</span>Visual comparisons of original models.  <span class="token punctuation">}</span>
+    <span class="token function selector">\label</span><span class="token punctuation">{</span><span class="token keyword">fig4</span><span class="token punctuation">}</span>
+<span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">figure</span><span class="token punctuation">}</span>
+</code></pre>
+<pre class=" language-latex"><code class="language-latex"><span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">figure</span><span class="token punctuation">}</span><span class="token punctuation">[</span>H<span class="token punctuation">]</span>
     <span class="token function selector">\caption</span><span class="token punctuation">{</span>高峰区到低峰区的调度示意图<span class="token punctuation">}</span>
     <span class="token function selector">\label</span><span class="token punctuation">{</span><span class="token keyword">diaoduhou1</span><span class="token punctuation">}</span> <span class="token comment" spellcheck="true">%要在标题下设置</span>
     <span class="token function selector">\subfigure</span>
@@ -805,7 +856,7 @@ $$
      <span class="token comment" spellcheck="true">% ...... </span>
 <span class="token comment" spellcheck="true">% \end{thebibliogaraphy} </span>
 <span class="token comment" spellcheck="true">% 其中文献条目包括：作业，题目，出版社，年代，版本，页码等 </span>
-<span class="token comment" spellcheck="true">% 引用时候要可以采用：\cite{引用标志1,引用标志2，....}</span>
+<span class="token comment" spellcheck="true">% 引用时候要可以采用：\cite{引用标志1,引用标志2，....}  平齐 %\textsuperscript{\cite{article1}}  上标</span>
 
 <span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">thebibliography</span><span class="token punctuation">}</span><span class="token punctuation">{</span>1<span class="token punctuation">}</span>
     <span class="token comment" spellcheck="true">% 使用\bibitem{}引用具体文献</span>
@@ -813,41 +864,61 @@ $$
     司守奎, 孙兆亮. 数学建模算法与应用 <span class="token punctuation">[</span>M<span class="token punctuation">]</span>. 北京: 国防工业出版,2015.
 <span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">thebibliography</span><span class="token punctuation">}</span>
 </code></pre>
-<h2 id="毕业论文"><a href="#毕业论文" class="headerlink" title="毕业论文"></a>毕业论文</h2><h3 id="表格-1"><a href="#表格-1" class="headerlink" title="表格"></a>表格</h3><pre><code>\begin{table}
-  \centering
-  \begin{tabular}{cc}
+<h2 id="毕业论文"><a href="#毕业论文" class="headerlink" title="毕业论文"></a>毕业论文</h2><h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><pre class=" language-latex"><code class="language-latex"><span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">table</span><span class="token punctuation">}</span>
+  <span class="token function selector">\centering</span>
+  <span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">tabular</span><span class="token punctuation">}</span><span class="token punctuation">{</span>cc<span class="token punctuation">}</span>
     
-  \end{tabular}
-  \caption{A table for testing the English version list of tables with long
-    caption. Try to make this caption longer than one line.}
-  \label{tab:test:english}
-\end{table}
+  <span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">tabular</span><span class="token punctuation">}</span>
+  <span class="token function selector">\caption</span><span class="token punctuation">{</span>A table for testing the English version list of tables with long
+    caption. Try to make this caption longer than one line.<span class="token punctuation">}</span>
+  <span class="token function selector">\label</span><span class="token punctuation">{</span><span class="token keyword">tab:test:english</span><span class="token punctuation">}</span>
+<span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">table</span><span class="token punctuation">}</span>
 
 
-\begin{table}
-  \centering
-  \begin{tabular}{cc}
+<span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">table</span><span class="token punctuation">}</span>
+  <span class="token function selector">\centering</span>
+  <span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">tabular</span><span class="token punctuation">}</span><span class="token punctuation">{</span>cc<span class="token punctuation">}</span>
     
-  \end{tabular}
-  \caption[Short table caption]{A table for testing the English version list of
-    tables with long caption.}
-  \label{tab:test:eng-short}
-\end{table}
+  <span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">tabular</span><span class="token punctuation">}</span>
+  <span class="token function selector">\caption</span><span class="token punctuation">[</span>Short table caption<span class="token punctuation">]</span><span class="token punctuation">{</span>A table for testing the English version list of
+    tables with long caption.<span class="token punctuation">}</span>
+  <span class="token function selector">\label</span><span class="token punctuation">{</span><span class="token keyword">tab:test:eng-short</span><span class="token punctuation">}</span>
+<span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">table</span><span class="token punctuation">}</span>
 </code></pre>
-<h3 id="图片-1"><a href="#图片-1" class="headerlink" title="图片"></a>图片</h3><pre><code>\begin{figure}
-  \centering
+<h3 id="图片-1"><a href="#图片-1" class="headerlink" title="图片"></a>图片</h3><pre class=" language-latex"><code class="language-latex"><span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">figure</span><span class="token punctuation">}</span>
+  <span class="token function selector">\centering</span>
   
-  \caption{插图测试B}
-  \label{fig:test:b}
-\end{figure}
-
-
-\begin{figure}
-  \centering
-  
-  \caption{Testing for English version list of figures with a very long caption.}
-  \label{fig:test:english}
-\end{figure}
+  <span class="token function selector">\caption</span><span class="token punctuation">{</span>插图测试B<span class="token punctuation">}</span>
+  <span class="token function selector">\label</span><span class="token punctuation">{</span><span class="token keyword">fig:test:b</span><span class="token punctuation">}</span>
+<span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">figure</span><span class="token punctuation">}</span>
+</code></pre>
+<h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><pre class=" language-latex"><code class="language-latex">本模版参考文献统一采用bibtex格式，统一集中在本目录下的<span class="token function selector">\textit</span><span class="token punctuation">{</span>refs.bib<span class="token punctuation">}</span>下。
+脚注的粒子<span class="token function selector">\footnote</span><span class="token punctuation">{</span>文献格式的工作尚未开始，拟基于<span class="token function selector">\texttt</span><span class="token punctuation">{</span>biblatex<span class="token punctuation">}</span>实现文献引用，工作量较大。<span class="token punctuation">}</span>。
+文献<span class="token function selector">\cite</span><span class="token punctuation">{</span><span class="token keyword">Itti98,russakovsky2015imagenet</span><span class="token punctuation">}</span>给出了期刊文章的例
+子，文献<span class="token function selector">\onlinecite</span><span class="token punctuation">{</span>ln111:_examp_confer_artic_title,deng2009imagenet<span class="token punctuation">}</span>则给出了会议文章的例子
+</code></pre>
+<blockquote>
+<p>注意：<code>\cite{}</code>为右上角引用，<code>\onlinecite{}</code>为平行引用。</p>
+</blockquote>
+<h3 id="文档类更改记录"><a href="#文档类更改记录" class="headerlink" title="文档类更改记录"></a>文档类更改记录</h3><ul>
+<li>上间距不够3cm</li>
+</ul>
+<pre class=" language-latex"><code class="language-latex"><span class="token function selector">\addtolength</span><span class="token punctuation">{</span><span class="token function selector">\textheight</span><span class="token punctuation">}</span><span class="token punctuation">{</span>-4.5cm<span class="token punctuation">}</span>
+<span class="token function selector">\setlength</span><span class="token punctuation">{</span><span class="token function selector">\topmargin</span><span class="token punctuation">}</span><span class="token punctuation">{</span>2.45cm-1in<span class="token punctuation">}</span>
+<span class="token function selector">\setlength</span><span class="token punctuation">{</span><span class="token function selector">\headheight</span><span class="token punctuation">}</span><span class="token punctuation">{</span>15pt<span class="token punctuation">}</span>
+<span class="token function selector">\setlength</span><span class="token punctuation">{</span><span class="token function selector">\headsep</span><span class="token punctuation">}</span><span class="token punctuation">{</span>0.4cm<span class="token punctuation">}</span>
+<span class="token function selector">\setlength</span><span class="token punctuation">{</span><span class="token function selector">\footskip</span><span class="token punctuation">}</span><span class="token punctuation">{</span>18pt<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">%自己调整，感觉大概合适</span>
+</code></pre>
+<ul>
+<li>章标题上面太宽</li>
+</ul>
+<pre class=" language-latex"><code class="language-latex"><span class="token function selector">\setlength</span><span class="token punctuation">{</span><span class="token function selector">\xdu</span>@chapter@before<span class="token punctuation">}</span><span class="token punctuation">{</span>10mm<span class="token punctuation">}</span>
+</code></pre>
+<ul>
+<li>目录的数字为小罗马</li>
+</ul>
+<pre class=" language-latex"><code class="language-latex"><span class="token function selector">\ifxdu</span>@bachelor<span class="token function selector">\pagenumbering</span><span class="token punctuation">{</span>Roman<span class="token punctuation">}</span><span class="token function selector">\else</span><span class="token function selector">\pagenumbering</span><span class="token punctuation">{</span>roman<span class="token punctuation">}</span><span class="token function selector">\fi</span>
 </code></pre>
 
                 
@@ -1197,7 +1268,7 @@ $$
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">25k</span>
+                        class="white-color">25.6k</span>
             
             
             
